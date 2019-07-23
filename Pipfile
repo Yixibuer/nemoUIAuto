@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pytest = "*"
+appium-python-client = "*"
+flaky = "*"
+allure-pytest = "*"
+pyyaml = "*"
+
+[requires]
+python_version = "3.7"
