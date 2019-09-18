@@ -2,7 +2,7 @@
 import allure
 
 from page.base_page import BasePage
-from page.page_login_ac import LoginPage
+from page.page_login_ac import LoginPageAC
 
 
 class FirstPage(BasePage):
@@ -15,14 +15,12 @@ class FirstPage(BasePage):
     @allure.step('选择账号登录方式')
     def tap_login_by_ac_bt(self):
         self.find(self._login_by_ac).click()
-        return LoginPage()
+        return LoginPageAC()
 
     @allure.step('选择微信登录方式')
-    def tap_login_by_ac_bt(self):
+    def tap_login_by_we_bt(self):
         self.find(self._login_by_we).click()
-        return LoginPage()
 
     @allure.step('选择QQ登录方式')
-    def tap_login_by_ac_bt(self):
-        self.find(self._login_by_ac).click()
-        return LoginPage()
+    def tap_login_by_qq_bt(self):
+        self.find(self._login_by_qq).click()

@@ -5,7 +5,7 @@ from page.base_page import BasePage
 from page.page_register import RegPage
 
 
-class LoginPage(BasePage):
+class LoginPageAC(BasePage):
 
     def __init__(self):
         self._account = (self.MB.ID, 'edit_user_name')
@@ -19,7 +19,7 @@ class LoginPage(BasePage):
     def _input_account(self, account: str):
         self.find(self._account).send_keys(account)
 
-    @allure.step('输入用户名 <{pw}>')
+    @allure.step('输入密码 <{pw}>')
     def _input_password(self, pw: str):
         self.find(self._password).send_keys(pw)
 
