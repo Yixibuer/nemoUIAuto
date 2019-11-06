@@ -1,0 +1,23 @@
+[2019-11-05 14:06:02,689] conftest.py->login_logout line:228 [INFO]为避免正在运行先停止
+[2019-11-05 14:06:04,124] conftest.py->login_logout line:232 [INFO]第一种方法，启动App（包名）
+[2019-11-05 14:06:21,386] conftest.py->login_logout line:250 [INFO]设置xpath全局等待10s
+[2019-11-05 14:06:21,386] conftest.py->login_logout line:255 [INFO]点击切换环境按钮
+[2019-11-05 14:06:21,393] api.py->__retry_internal line:40 [WARNING]uiautomator2.GatewayError(gateway error, time used 0.0s), retrying in 3.0 seconds...
+[D 191105 14:06:24 __init__:639] force reset uiautomator
+[D 191105 14:06:24 __init__:655] uiautomator(1.0) is starting ...
+[D 191105 14:06:25 __init__:655] uiautomator(1.0) is starting ...
+[D 191105 14:06:26 __init__:655] uiautomator(1.0) is starting ...
+[I 191105 14:06:26 __init__:643] uiautomator back to normal
+[2019-11-05 14:06:28,038] conftest.py->login_logout line:259 [INFO]选择test环境并等待0.5s
+[2019-11-05 14:06:29,801] conftest.py->login_logout line:264 [INFO]选择编程猫账号登录
+[2019-11-05 14:06:31,223] conftest.py->login_logout line:268 [INFO]点击账号，并切换成FastInputIME输入法输入username183
+[2019-11-05 14:06:36,958] conftest.py->login_logout line:274 [INFO]点击密码，输入password183
+[2019-11-05 14:06:40,287] conftest.py->login_logout line:279 [INFO]切换回正常输入法并点击登录按钮
+[2019-11-05 14:06:46,248] conftest.py->login_logout line:299 [INFO]校验是否成功登录并进入首页
+[2019-11-05 14:06:49,324] conftest.py->myteardown line:308 [INFO]获取设备udid
+[2019-11-05 14:06:51,638] conftest.py->myteardown line:322 [INFO]为避免正在运行先停止
+[2019-11-05 14:06:52,612] conftest.py->myteardown line:326 [INFO]第一种方法，启动App（包名）
+[2019-11-05 14:07:08,460] conftest.py->myteardown line:337 [INFO]点击我的
+[2019-11-05 14:07:09,994] conftest.py->myteardown line:342 [INFO]点击设置按钮
+[2019-11-05 14:07:12,062] conftest.py->myteardown line:346 [INFO]从下滑到上（两次）
+[2019-11-05 14:07:12,913] conftest.py->myteardown line:354 [INFO]点击退出登录
