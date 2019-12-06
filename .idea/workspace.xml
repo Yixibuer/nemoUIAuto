@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24eb6264-67de-420c-91cd-01f96c0e71cf" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="24eb6264-67de-420c-91cd-01f96c0e71cf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/attachments/17db8fda376707bb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/attachments/8134dda2bb441085.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/attachments/b360eacb2600e383.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/behaviors.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/data/behaviors.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/data/behaviors.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/packages.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/data/packages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/suites.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/data/suites.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/data/suites.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/test-cases/f76eeb001e43d436.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/timeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/data/timeline.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/export/influxDbData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/export/influxDbData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/export/mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/export/mail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/export/prometheusData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/export/prometheusData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/history/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/history/duration-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/history/history-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/history/history-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/history/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/history/history.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/history/retry-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/history/retry-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/plugins/behaviors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/plugins/behaviors/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/plugins/packages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/plugins/packages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/plugins/screen-diff/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/plugins/screen-diff/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/plugins/screen-diff/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/plugins/screen-diff/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/widgets/behaviors.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/widgets/duration-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/duration.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/widgets/duration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/history-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/widgets/history-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/retry-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/widgets/retry-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/severity.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/widgets/severity.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/status-chart.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/widgets/status-chart.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/widgets/suites.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/html/widgets/summary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/17c2c25e-7ca0-4354-8f03-fe0653f85b8c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/4a8af83f-72bb-4b59-b625-6b797028c5e8-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/62f39c7c-724a-4318-aea6-beba0e1ce9f8-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/8660ea47-e600-4c42-9d22-061d139e0b31-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/fc4f8b9c-95a2-4996-b2b6-704ed19adecb-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/history/t_login.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,27 +63,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1T8kzM8qlRgkh2mQZren7TcyvyO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/NewBCM" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PyLib\nemo_ui\history" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PyLib\nemo_ui\tests\NewBCM" />
+      <recent name="D:\PyLib\nemo_ui\tests\MainPage" />
       <recent name="D:\PyLib\AutoNemoUI" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.run_path">
     <configuration name="遍历创作页内按钮" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -141,7 +183,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_login.py" />
+      <option name="SCRIPT_NAME" value="D:\PyLib\nemo_ui\history\t_login.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,6 +201,18 @@
         <item itemvalue="Python.login_test_env" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -198,6 +252,7 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -222,5 +277,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加环境迁移freeze生成的requirements.txt文件" />
     <option name="LAST_COMMIT_MESSAGE" value="添加环境迁移freeze生成的requirements.txt文件" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="261" key="GridCell.Tab.0.bottom" timestamp="1575617925775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575617925775" />
+    <state width="1877" height="261" key="GridCell.Tab.0.center" timestamp="1575617925775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575617925775" />
+    <state width="1877" height="261" key="GridCell.Tab.0.left" timestamp="1575617925775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575617925775" />
+    <state width="1877" height="261" key="GridCell.Tab.0.right" timestamp="1575617925775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575617925775" />
   </component>
 </project>

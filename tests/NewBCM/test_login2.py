@@ -21,7 +21,17 @@ logger = MyLog().getlog()
 @allure.severity('important')
 @allure.testcase('http://u.pmdaniu.com/nWLp', name='测试用例链接')
 @allure.issue('https://phab.srv.codemao.cn/T15769', name='task-phabricator')
-def test_env_login_one(login_and_logout183):
+def test_env_login_two(login_and_logout183):
+    '''
+    启动App
+    点击切换环境按钮
+    选择test环境并等待0.5s
+    选择编程猫账号登录
+    点击账号，并切换成FastInputIME输入法输入username183
+    点击密码，输入password183
+    切换回正常输入法并点击登录按钮
+    校验是否成功登录并进入首页，推荐按钮text校验, 最新按钮text校验。
+    '''
     d = u2.connect(f"{udid}")  # alias for u2.connect_usb('98899a474a4c535541')621QTCQH222F2
     # d.debug = True
     # d.implicitly_wait(10.0)
@@ -126,6 +136,6 @@ if __name__ == '__main__':
     # 先删除report文件夹
     subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
     # # pytest.main(["-s", "-q", "--alluredir", path_xml])
-    pytest.main(["-s", "-q", "test_login.py", "--alluredir", path_xml])
+    pytest.main(["-s", "-q", "test_login1.py", "--alluredir", path_xml])
     subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
     subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)

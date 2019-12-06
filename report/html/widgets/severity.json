@@ -1,10 +1,20 @@
 [ {
-  "uid" : "f76eeb001e43d436",
+  "uid" : "a4a99d34ddd29eed",
   "name" : "test_env_login_one",
   "time" : {
-    "start" : 1572934006521,
-    "stop" : 1572934009323,
-    "duration" : 2802
+    "start" : 1575617985533,
+    "stop" : 1575617988437,
+    "duration" : 2904
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3d5522bea7a9ac1d",
+  "name" : "test_env_login_two",
+  "time" : {
+    "start" : 1575618054335,
+    "stop" : 1575618057213,
+    "duration" : 2878
   },
   "status" : "passed",
   "severity" : "normal"

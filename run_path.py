@@ -36,6 +36,6 @@ if __name__ == '__main__':
         file_obj.write("PackageName=com.codemao.nemo\n")
         file_obj.write("ActivityName=com.codemao.nemo.MainActivityV2")
     # 生成报告前把categories.json放到报告的xml文件夹里（通过复制）
-    path_categories_filename = os.path.join(sys.path[1], r"categories.json")
+    path_categories_filename = os.path.join(sys.path[2], r"categories.json")
     subprocess.run(r'copy ' + path_categories_filename + ' ' + path_xml, shell=True, check=True)
     subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)
