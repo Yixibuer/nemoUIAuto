@@ -230,9 +230,9 @@ def login_logout(request):
     with allure.step('第一种方法，启动App（包名）'):
         logger.info('第一种方法，启动App（包名）')
         d.app_start("com.codemao.nemo")
-        d.app_wait("com.codemao.nemo", front=True) # 等待应用前台运行
-        d.app_wait("ccom.codemao.nemo", timeout=10.0) # 最长等待时间20s（默认）
-        pid = d.app_wait("com.codemao.nemo") # 等待应用运行, return pid(int)
+        d.app_wait("com.codemao.nemo", front=True)  # 等待应用前台运行
+        d.app_wait("ccom.codemao.nemo", timeout=10.0)  # 最长等待时间20s（默认）
+        pid = d.app_wait("com.codemao.nemo")  # 等待应用运行, return pid(int)
         if not pid:
             print("com.codemao.nemo is not running")
         else:
@@ -250,14 +250,14 @@ def login_logout(request):
         d.xpath.global_set("timeout", 10)
     # pprint.pprint(nemo.info)
 
-    with allure.step('点击切换环境按钮'):
-        logger.info('点击切换环境按钮')
-        d(resourceId="com.codemao.nemo:id/tv_change").click()
-
-    with allure.step('选择test环境并等待0.5s'):
-        logger.info('选择test环境并等待0.5s')
-        d(resourceId="com.codemao.nemo:id/tv_test").click()
-        time.sleep(0.5)
+    # with allure.step('点击切换环境按钮'):
+    #     logger.info('点击切换环境按钮')
+    #     d(resourceId="com.codemao.nemo:id/tv_change").click()
+    #
+    # with allure.step('选择test环境并等待0.5s'):
+    #     logger.info('选择test环境并等待0.5s')
+    #     d(resourceId="com.codemao.nemo:id/tv_test").click()
+    #     time.sleep(0.5)
 
     with allure.step('选择编程猫账号登录'):
         logger.info('选择编程猫账号登录')

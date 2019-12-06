@@ -1,8 +1,6 @@
 INFO     root:conftest.py:227 为避免正在运行先停止
 INFO     root:conftest.py:231 第一种方法，启动App（包名）
 INFO     root:conftest.py:249 设置xpath全局等待10s
-INFO     root:conftest.py:254 点击切换环境按钮
-INFO     root:conftest.py:258 选择test环境并等待0.5s
 INFO     root:conftest.py:263 选择编程猫账号登录
 INFO     root:conftest.py:267 点击账号，并切换成FastInputIME输入法输入username183
 INFO     root:conftest.py:273 点击密码，输入password183

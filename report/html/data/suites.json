@@ -8,13 +8,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_env_login_one",
-          "uid" : "a4a99d34ddd29eed",
+          "uid" : "c9f22913123cddd7",
           "parentUid" : "366a0c705667cd9a7eca562d8dbc807d",
           "status" : "passed",
           "time" : {
-            "start" : 1575617985533,
-            "stop" : 1575617988437,
-            "duration" : 2904
+            "start" : 1575626336804,
+            "stop" : 1575626339536,
+            "duration" : 2732
           },
           "flaky" : false,
           "newFailed" : false,
@@ -32,13 +32,13 @@
       "children" : [ {
         "children" : [ {
           "name" : "test_env_login_two",
-          "uid" : "3d5522bea7a9ac1d",
+          "uid" : "8a40b42f01ddd7f1",
           "parentUid" : "06c59bebe65b63c32dbfb1b6fea09721",
           "status" : "passed",
           "time" : {
-            "start" : 1575618054335,
-            "stop" : 1575618057213,
-            "duration" : 2878
+            "start" : 1575626401330,
+            "stop" : 1575626404078,
+            "duration" : 2748
           },
           "flaky" : false,
           "newFailed" : false,
