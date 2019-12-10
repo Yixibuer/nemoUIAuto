@@ -7,13 +7,13 @@
       "name" : "MainPage.test_login1",
       "children" : [ {
         "name" : "test_env_login_one",
-        "uid" : "c9f22913123cddd7",
+        "uid" : "df62dc0e08066be",
         "parentUid" : "6935e72b725d625784f00ac8c55ed08f",
         "status" : "passed",
         "time" : {
-          "start" : 1575626336804,
-          "stop" : 1575626339536,
-          "duration" : 2732
+          "start" : 1575957642146,
+          "stop" : 1575957645074,
+          "duration" : 2928
         },
         "flaky" : false,
         "newFailed" : false,
@@ -24,13 +24,13 @@
       "name" : "NewBCM.test_login2",
       "children" : [ {
         "name" : "test_env_login_two",
-        "uid" : "8a40b42f01ddd7f1",
+        "uid" : "297cac2ba275f34d",
         "parentUid" : "d13dac5f99d70d0a761a6ad01c71c130",
         "status" : "passed",
         "time" : {
-          "start" : 1575626401330,
-          "stop" : 1575626404078,
-          "duration" : 2748
+          "start" : 1575957703959,
+          "stop" : 1575957706924,
+          "duration" : 2965
         },
         "flaky" : false,
         "newFailed" : false,

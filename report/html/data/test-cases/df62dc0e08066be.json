@@ -1,12 +1,12 @@
 {
-  "uid" : "c9f22913123cddd7",
+  "uid" : "df62dc0e08066be",
   "name" : "test_env_login_one",
   "fullName" : "tests.MainPage.test_login1#test_env_login_one",
   "historyId" : "6fce239aa45a44ebe85bec5d966c2b8a",
   "time" : {
-    "start" : 1575626336804,
-    "stop" : 1575626339536,
-    "duration" : 2732
+    "start" : 1575957642146,
+    "stop" : 1575957645074,
+    "duration" : 2928
   },
   "description" : "\n    启动App\n    点击切换环境按钮\n    选择test环境并等待0.5s\n    选择编程猫账号登录\n    点击账号，并切换成FastInputIME输入法输入username183\n    点击密码，输入password183\n    切换回正常输入法并点击登录按钮\n    校验是否成功登录并进入首页，推荐按钮text校验, 最新按钮text校验。\n    ",
   "descriptionHtml" : "<pre><code>启动App\n点击切换环境按钮\n选择test环境并等待0.5s\n选择编程猫账号登录\n点击账号，并切换成FastInputIME输入法输入username183\n点击密码，输入password183\n切换回正常输入法并点击登录按钮\n校验是否成功登录并进入首页，推荐按钮text校验, 最新按钮text校验。\n</code></pre>\n",
@@ -16,138 +16,138 @@
   "beforeStages" : [ {
     "name" : "login_and_logout183",
     "time" : {
-      "start" : 1575626301032,
-      "stop" : 1575626336803,
-      "duration" : 35771
+      "start" : 1575957606004,
+      "stop" : 1575957642143,
+      "duration" : 36139
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "为避免正在运行先停止",
       "time" : {
-        "start" : 1575626303342,
-        "stop" : 1575626304266,
-        "duration" : 924
+        "start" : 1575957608309,
+        "stop" : 1575957608493,
+        "duration" : 184
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
-      "attachmentsCount" : 0,
+      "stepsCount" : 0,
       "hasContent" : false,
-      "stepsCount" : 0
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "第一种方法，启动App（包名）",
       "time" : {
-        "start" : 1575626304266,
-        "stop" : 1575626320761,
-        "duration" : 16495
+        "start" : 1575957608493,
+        "stop" : 1575957621924,
+        "duration" : 13431
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
-      "attachmentsCount" : 0,
+      "stepsCount" : 0,
       "hasContent" : false,
-      "stepsCount" : 0
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "设置xpath全局等待10s",
       "time" : {
-        "start" : 1575626320761,
-        "stop" : 1575626320761,
-        "duration" : 0
+        "start" : 1575957621924,
+        "stop" : 1575957621925,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
-      "attachmentsCount" : 0,
+      "stepsCount" : 0,
       "hasContent" : false,
-      "stepsCount" : 0
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "选择编程猫账号登录",
       "time" : {
-        "start" : 1575626320761,
-        "stop" : 1575626322165,
-        "duration" : 1404
+        "start" : 1575957621925,
+        "stop" : 1575957623431,
+        "duration" : 1506
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
-      "attachmentsCount" : 0,
+      "stepsCount" : 0,
       "hasContent" : false,
-      "stepsCount" : 0
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "点击账号，并切换成FastInputIME输入法输入username183",
       "time" : {
-        "start" : 1575626322165,
-        "stop" : 1575626327734,
-        "duration" : 5569
+        "start" : 1575957623431,
+        "stop" : 1575957626055,
+        "duration" : 2624
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
-      "attachmentsCount" : 0,
+      "stepsCount" : 0,
       "hasContent" : false,
-      "stepsCount" : 0
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "点击密码，输入password183",
       "time" : {
-        "start" : 1575626327734,
-        "stop" : 1575626331150,
-        "duration" : 3416
+        "start" : 1575957626055,
+        "stop" : 1575957637181,
+        "duration" : 11126
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
-      "attachmentsCount" : 0,
+      "stepsCount" : 0,
       "hasContent" : false,
-      "stepsCount" : 0
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "切换回正常输入法并点击登录按钮",
       "time" : {
-        "start" : 1575626331150,
-        "stop" : 1575626336239,
-        "duration" : 5089
+        "start" : 1575957637181,
+        "stop" : 1575957641671,
+        "duration" : 4490
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
-      "attachmentsCount" : 0,
+      "stepsCount" : 0,
       "hasContent" : false,
-      "stepsCount" : 0
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "校验是否成功登录并进入首页，推荐按钮text校验：推荐, 最新按钮text校验：最新",
       "time" : {
-        "start" : 1575626336568,
-        "stop" : 1575626336803,
-        "duration" : 235
+        "start" : 1575957641893,
+        "stop" : 1575957642143,
+        "duration" : 250
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
-      "attachmentsCount" : 0,
+      "stepsCount" : 0,
       "hasContent" : false,
-      "stepsCount" : 0
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
-    "attachmentsCount" : 0,
+    "stepsCount" : 8,
     "hasContent" : true,
-    "stepsCount" : 8
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   } ],
   "testStage" : {
     "description" : "\n    启动App\n    点击切换环境按钮\n    选择test环境并等待0.5s\n    选择编程猫账号登录\n    点击账号，并切换成FastInputIME输入法输入username183\n    点击密码，输入password183\n    切换回正常输入法并点击登录按钮\n    校验是否成功登录并进入首页，推荐按钮text校验, 最新按钮text校验。\n    ",
@@ -155,164 +155,164 @@
     "steps" : [ {
       "name" : "step in \"Tear down\" from conftest.py",
       "time" : {
-        "start" : 1575626339536,
-        "stop" : 1575626364920,
-        "duration" : 25384
+        "start" : 1575957645076,
+        "stop" : 1575957667283,
+        "duration" : 22207
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "获取设备udid",
         "time" : {
-          "start" : 1575626339536,
-          "stop" : 1575626341859,
-          "duration" : 2323
+          "start" : 1575957645076,
+          "stop" : 1575957647456,
+          "duration" : 2380
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "shouldDisplayMessage" : false,
-        "attachmentsCount" : 0,
+        "stepsCount" : 0,
         "hasContent" : false,
-        "stepsCount" : 0
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
       }, {
         "name" : "为避免正在运行先停止",
         "time" : {
-          "start" : 1575626341859,
-          "stop" : 1575626342984,
-          "duration" : 1125
+          "start" : 1575957647456,
+          "stop" : 1575957647587,
+          "duration" : 131
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "shouldDisplayMessage" : false,
-        "attachmentsCount" : 0,
+        "stepsCount" : 0,
         "hasContent" : false,
-        "stepsCount" : 0
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
       }, {
         "name" : "第一种方法，启动App（包名）",
         "time" : {
-          "start" : 1575626342984,
-          "stop" : 1575626358505,
-          "duration" : 15521
+          "start" : 1575957647587,
+          "stop" : 1575957661384,
+          "duration" : 13797
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "shouldDisplayMessage" : false,
-        "attachmentsCount" : 0,
+        "stepsCount" : 0,
         "hasContent" : false,
-        "stepsCount" : 0
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
       }, {
         "name" : "点击我的",
         "time" : {
-          "start" : 1575626358505,
-          "stop" : 1575626360005,
-          "duration" : 1500
+          "start" : 1575957661384,
+          "stop" : 1575957663063,
+          "duration" : 1679
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "shouldDisplayMessage" : false,
-        "attachmentsCount" : 0,
+        "stepsCount" : 0,
         "hasContent" : false,
-        "stepsCount" : 0
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
       }, {
         "name" : "点击设置按钮",
         "time" : {
-          "start" : 1575626360005,
-          "stop" : 1575626362208,
-          "duration" : 2203
+          "start" : 1575957663063,
+          "stop" : 1575957664533,
+          "duration" : 1470
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "shouldDisplayMessage" : false,
-        "attachmentsCount" : 0,
+        "stepsCount" : 0,
         "hasContent" : false,
-        "stepsCount" : 0
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
       }, {
         "name" : "从下滑到上（两次）",
         "time" : {
-          "start" : 1575626362208,
-          "stop" : 1575626363025,
-          "duration" : 817
+          "start" : 1575957664533,
+          "stop" : 1575957665461,
+          "duration" : 928
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "shouldDisplayMessage" : false,
-        "attachmentsCount" : 0,
+        "stepsCount" : 0,
         "hasContent" : false,
-        "stepsCount" : 0
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
       }, {
         "name" : "点击退出登录",
         "time" : {
-          "start" : 1575626363025,
-          "stop" : 1575626364920,
-          "duration" : 1895
+          "start" : 1575957665461,
+          "stop" : 1575957667283,
+          "duration" : 1822
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "shouldDisplayMessage" : false,
-        "attachmentsCount" : 0,
+        "stepsCount" : 0,
         "hasContent" : false,
-        "stepsCount" : 0
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "shouldDisplayMessage" : false,
-      "attachmentsCount" : 0,
+      "stepsCount" : 7,
       "hasContent" : true,
-      "stepsCount" : 7
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     } ],
     "attachments" : [ {
-      "uid" : "f88364266d07bfb0",
+      "uid" : "33bafdf49d71a718",
       "name" : "log",
-      "source" : "f88364266d07bfb0.txt",
+      "source" : "33bafdf49d71a718.txt",
       "type" : "text/plain",
       "size" : 927
     }, {
-      "uid" : "2c4eee176f46e6a7",
+      "uid" : "ef44e38391b1fbb7",
       "name" : "stdout",
-      "source" : "2c4eee176f46e6a7.txt",
+      "source" : "ef44e38391b1fbb7.txt",
       "type" : "text/plain",
       "size" : 62
     }, {
-      "uid" : "d1887cc22d2eda4f",
+      "uid" : "7c3197f62cc8242c",
       "name" : "stderr",
-      "source" : "d1887cc22d2eda4f.txt",
+      "source" : "7c3197f62cc8242c.txt",
       "type" : "text/plain",
       "size" : 1469
     } ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
-    "attachmentsCount" : 3,
+    "stepsCount" : 8,
     "hasContent" : true,
-    "stepsCount" : 8
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false
   },
   "afterStages" : [ {
     "name" : "login_and_logout183::0",
     "time" : {
-      "start" : 1575626339536,
-      "stop" : 1575626339536,
-      "duration" : 0
+      "start" : 1575957645075,
+      "stop" : 1575957645076,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
-    "attachmentsCount" : 0,
+    "stepsCount" : 0,
     "hasContent" : false,
-    "stepsCount" : 0
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   } ],
   "labels" : [ {
     "name" : "tag",
@@ -339,7 +339,7 @@
     "value" : "LAPTOP-09Q56GFJ"
   }, {
     "name" : "thread",
-    "value" : "18252-MainThread"
+    "value" : "8244-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -371,6 +371,6 @@
     "categories" : [ ],
     "tags" : [ "P0", "environment:test" ]
   },
-  "source" : "c9f22913123cddd7.json",
+  "source" : "df62dc0e08066be.json",
   "parameterValues" : [ ]
 }
