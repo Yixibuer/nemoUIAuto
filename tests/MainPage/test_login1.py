@@ -15,7 +15,7 @@ from logs.my_logger import MyLog
 logger = MyLog().getlog()
 
 
-@allure.tag(f"environment:{ENV}", "P0")
+@allure.tag(f"environment:{ENV}", "P0", "TC0001")
 @allure.feature('登录测试')
 # @allure.story('用例1')
 @allure.severity('important')

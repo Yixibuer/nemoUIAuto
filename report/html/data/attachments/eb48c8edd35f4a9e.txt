@@ -1,2 +1,0 @@
-ccom.codemao.nemo pid is 17575
-ccom.codemao.nemo pid is 18056

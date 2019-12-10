@@ -1,0 +1,15 @@
+[2019-12-10 15:29:10,350] conftest.py->login_logout line:227 [INFO]为避免正在运行先停止
+[2019-12-10 15:29:10,490] conftest.py->login_logout line:231 [INFO]第一种方法，启动App（包名）
+[2019-12-10 15:29:23,836] conftest.py->login_logout line:249 [INFO]设置xpath全局等待10s
+[2019-12-10 15:29:23,837] conftest.py->login_logout line:263 [INFO]选择编程猫账号登录
+[2019-12-10 15:29:25,397] conftest.py->login_logout line:267 [INFO]点击账号，并切换成FastInputIME输入法输入username183
+[2019-12-10 15:29:28,155] conftest.py->login_logout line:273 [INFO]点击密码，输入password183
+[2019-12-10 15:29:39,256] conftest.py->login_logout line:278 [INFO]切换回正常输入法并点击登录按钮
+[2019-12-10 15:29:43,919] conftest.py->login_logout line:298 [INFO]校验是否成功登录并进入首页
+[2019-12-10 15:29:47,225] conftest.py->myteardown line:307 [INFO]获取设备udid
+[2019-12-10 15:29:49,553] conftest.py->myteardown line:321 [INFO]为避免正在运行先停止
+[2019-12-10 15:29:49,669] conftest.py->myteardown line:325 [INFO]第一种方法，启动App（包名）
+[2019-12-10 15:30:03,184] conftest.py->myteardown line:336 [INFO]点击我的
+[2019-12-10 15:30:04,639] conftest.py->myteardown line:341 [INFO]点击设置按钮
+[2019-12-10 15:30:06,021] conftest.py->myteardown line:345 [INFO]从下滑到上（两次）
+[2019-12-10 15:30:06,948] conftest.py->myteardown line:353 [INFO]点击退出登录

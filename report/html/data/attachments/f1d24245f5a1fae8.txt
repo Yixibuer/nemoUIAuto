@@ -1,0 +1,24 @@
+WARNING  urllib3.connectionpool:connectionpool.py:665 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))': /version
+WARNING  urllib3.connectionpool:connectionpool.py:665 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))': /version
+WARNING  urllib3.connectionpool:connectionpool.py:665 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))': /version
+WARNING  urllib3.connectionpool:connectionpool.py:665 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))': /version
+WARNING  urllib3.connectionpool:connectionpool.py:665 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))': /version
+WARNING  urllib3.connectionpool:connectionpool.py:665 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))': /version
+WARNING  urllib3.connectionpool:connectionpool.py:665 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))': /version
+WARNING  urllib3.connectionpool:connectionpool.py:665 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))': /version
+INFO     root:conftest.py:227 为避免正在运行先停止
+INFO     root:conftest.py:231 第一种方法，启动App（包名）
+INFO     root:conftest.py:249 设置xpath全局等待10s
+INFO     root:conftest.py:263 选择编程猫账号登录
+WARNING  retry.api:api.py:40 uiautomator2.GatewayError(gateway error, time used 0.0s), retrying in 3.0 seconds...
+INFO     root:conftest.py:267 点击账号，并切换成FastInputIME输入法输入username183
+INFO     root:conftest.py:273 点击密码，输入password183
+INFO     root:conftest.py:278 切换回正常输入法并点击登录按钮
+INFO     root:conftest.py:298 校验是否成功登录并进入首页
+INFO     root:conftest.py:307 获取设备udid
+INFO     root:conftest.py:321 为避免正在运行先停止
+INFO     root:conftest.py:325 第一种方法，启动App（包名）
+INFO     root:conftest.py:336 点击我的
+INFO     root:conftest.py:341 点击设置按钮
+INFO     root:conftest.py:345 从下滑到上（两次）
+INFO     root:conftest.py:353 点击退出登录
