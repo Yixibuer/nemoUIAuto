@@ -1,0 +1,29 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "tests.WorkDetailPage",
+    "children" : [ {
+      "name" : "test_work_detail",
+      "children" : [ {
+        "children" : [ {
+          "name" : "test_work_detail_seven",
+          "uid" : "b8967159f1884b64",
+          "parentUid" : "31f0ac71dfb9d1b603c95b00c36e9c97",
+          "status" : "passed",
+          "time" : {
+            "start" : 1577266132550,
+            "stop" : 1577266540724,
+            "duration" : 408174
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "31f0ac71dfb9d1b603c95b00c36e9c97"
+      } ],
+      "uid" : "77ccb83ad654ece2a22ba68b0ff28834"
+    } ],
+    "uid" : "5257f5c6d529d86c738bd9a52c5aff03"
+  } ]
+}

@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Dec 25 17:28:52 CST 2019","Wed Dec 25 17:35:40 CST 2019","408174","tests.WorkDetailPage","test_work_detail","","","","test_work_detail_seven","
+    验证作品详情页再创作按钮的""稍后打开""功能是否正常
+    "

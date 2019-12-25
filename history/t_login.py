@@ -126,6 +126,6 @@ if __name__ == '__main__':
     # 先删除report文件夹
     subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
     # # pytest.main(["-s", "-q", "--alluredir", path_xml])
-    pytest.main(["-s", "-q", "test_login1.py", "--alluredir", path_xml])
+    pytest.main(["-s", "-q", "test_login.py", "--alluredir", path_xml])
     subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
     subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)

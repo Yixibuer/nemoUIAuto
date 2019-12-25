@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "tests.WorkDetailPage.test_work_detail",
+    "children" : [ {
+      "name" : "test_work_detail_seven",
+      "uid" : "b8967159f1884b64",
+      "parentUid" : "e8a2183b44b4801659e5f9639a1cb730",
+      "status" : "passed",
+      "time" : {
+        "start" : 1577266132550,
+        "stop" : 1577266540724,
+        "duration" : 408174
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "tests.WorkDetailPage.test_work_detail"
+  } ]
+}

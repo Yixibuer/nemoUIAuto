@@ -20,8 +20,9 @@ def read_excel(filename, sheet_name):
     return test_data
 
 
-from dir_config import testdatas_dir
 if __name__ == '__main__':
+    from dir_config import testdatas_dir
+
     filename = testdatas_dir + "从模板创作.xlsx"
     test_datas = list(read_excel(filename, 'data'))
     print(test_datas)

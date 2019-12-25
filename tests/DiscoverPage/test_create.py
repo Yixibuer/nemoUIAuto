@@ -19,7 +19,7 @@ logger = MyLog().getlog()
 @allure.feature('“地底寻宝”模板作品测试')
 # @allure.story('用例1')
 @allure.severity('important')
-def test_mould_create(login_and_logout183):
+def test_mould_create(login_and_logout183_module, stop_and_run_nemo):
     '''
     启动App并登录
     点击“+”
@@ -81,20 +81,32 @@ def test_mould_create(login_and_logout183):
         #     if b == bcm[1]:
         #     d(resourceId="com.codemao.nemo:id/tv_enter").click()
 
-    with allure.step('验证加载作品提示，成功进入创作成功'):
-        logger.info('验证加载作品提示，成功进入创作')
-        # 验证成功进入创作
-        load = d.xpath('//*[@text="作品加载中"]')
-        assert load.wait()
-        assert load.get_text()
+    with allure.step('来到创作页内，点击左上角菜单按钮'):
+        logger.info('来到创作页内，点击左上角菜单按钮')
+        # 关键步骤，来到创作页等待一定时间再定位元素
         time.sleep(10)
+        d(resourceId="com.codemao.nemo:id/menu", className="android.widget.ImageView").click()
+
+    with allure.step('校验存在退出、发布、帮助按钮'):
+        logger.info('校验存在退出、发布、帮助按钮')
+        quit_button = d.xpath('//*[@resource-id="com.codemao.nemo:id/tv_quit"]')
+        upload_button = d.xpath('//*[@resource-id="com.codemao.nemo:id/tv_upload"]')
+        help_button = d.xpath('//*[@resource-id="com.codemao.nemo:id/tv_help"]')
+        assert quit_button.get_text() == "退出"
+        assert upload_button.get_text() == "发布"
+        assert help_button.get_text() == "帮助"
+
+    with allure.step('点击退出'):
+        logger.info('点击退出')
+        d(resourceId="com.codemao.nemo:id/tv_quit").click()
+        time.sleep(1)
 
 
 @allure.tag(f"environment:{ENV}", "P0", "TC1006")
 @allure.feature('自由创作按钮测试')
 # @allure.story('用例1')
 @allure.severity('important')
-def test_free_create(login_and_logout183):
+def test_free_create(login_and_logout183_module, stop_and_run_nemo):
     '''
     启动App并登录
     点击“+”
@@ -134,14 +146,25 @@ def test_free_create(login_and_logout183):
         d(resourceId="com.codemao.nemo:id/item3_area").click()
         time.sleep(1)
 
-    with allure.step('验证加载作品提示，成功进入创作成功'):
-        logger.info('验证加载作品提示，成功进入创作')
-        # 验证成功进入创作
-        load = d.xpath('//*[@text="作品加载中"]')
-        assert load.wait()
-        assert load.get_text()
+    with allure.step('来到创作页内，点击左上角菜单按钮'):
+        logger.info('来到创作页内，点击左上角菜单按钮')
+        # 关键步骤，来到创作页等待一定时间再定位元素
         time.sleep(10)
-    yield
+        d(resourceId="com.codemao.nemo:id/menu", className="android.widget.ImageView").click()
+
+    with allure.step('校验存在退出、发布、帮助按钮'):
+        logger.info('校验存在退出、发布、帮助按钮')
+        quit_button = d.xpath('//*[@resource-id="com.codemao.nemo:id/tv_quit"]')
+        upload_button = d.xpath('//*[@resource-id="com.codemao.nemo:id/tv_upload"]')
+        help_button = d.xpath('//*[@resource-id="com.codemao.nemo:id/tv_help"]')
+        assert quit_button.get_text() == "退出"
+        assert upload_button.get_text() == "发布"
+        assert help_button.get_text() == "帮助"
+
+    with allure.step('点击退出'):
+        logger.info('点击退出')
+        d(resourceId="com.codemao.nemo:id/tv_quit").click()
+        time.sleep(1)
 
     # with allure.step('验证成功进入创作成功'):
     #     logger.info('验证成功进入创作')
@@ -163,7 +186,7 @@ def test_free_create(login_and_logout183):
 @allure.feature('创作方式选择页面关闭按钮测试')
 # @allure.story('用例1')
 @allure.severity('important')
-def test_cancel_create(login_and_logout183):
+def test_cancel_create(login_and_logout183_module, stop_and_run_nemo):
     '''
     启动App并登录
     点击“+”
@@ -250,20 +273,22 @@ def test_cancel_create(login_and_logout183):
         assert learn.wait()
         assert learn.get_text()
 
-    yield
-
 
 if __name__ == '__main__':
     import subprocess
     import sys
     import os
 
+    # pytest.main(["-v", "test_ban_and_recover_login.py"])
+    # pytest.main(["-v", "-s", "test_ban_and_recover_login.py"])
+    # pytest.main(["-v", "--setup-show", "test_ban_and_recover_login.py"])
+    # 运行全部test用例
     path_xml = os.path.join(sys.path[1], r"report\xml")
     path_html = os.path.join(sys.path[1], r"report\html")
     path_report = os.path.join(sys.path[1], r"report")
     # 先删除report文件夹
     subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
     # # pytest.main(["-s", "-q", "--alluredir", path_xml])
-    pytest.main(["-s", "-q", "test_create.py", "--alluredir", path_xml])
+    pytest.main(["-s", "-q", "test_create.py::test_cancel_create", "--alluredir", path_xml])
     subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
     subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)

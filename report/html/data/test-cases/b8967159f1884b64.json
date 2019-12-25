@@ -1,0 +1,715 @@
+{
+  "uid" : "b8967159f1884b64",
+  "name" : "test_work_detail_seven",
+  "fullName" : "tests.WorkDetailPage.test_work_detail#test_work_detail_seven",
+  "historyId" : "074859225e5014ccd9101a8676c3e162",
+  "time" : {
+    "start" : 1577266132550,
+    "stop" : 1577266540724,
+    "duration" : 408174
+  },
+  "description" : "\n    验证作品详情页再创作按钮的\"稍后打开\"功能是否正常\n    ",
+  "descriptionHtml" : "<pre><code>验证作品详情页再创作按钮的&quot;稍后打开&quot;功能是否正常\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login_and_logout183_module",
+    "time" : {
+      "start" : 1577266099711,
+      "stop" : 1577266127522,
+      "duration" : 27811
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "为避免正在运行先停止",
+      "time" : {
+        "start" : 1577266102686,
+        "stop" : 1577266102750,
+        "duration" : 64
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "第一种方法，启动App（包名）",
+      "time" : {
+        "start" : 1577266102750,
+        "stop" : 1577266106054,
+        "duration" : 3304
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "设置xpath全局等待10s",
+      "time" : {
+        "start" : 1577266106054,
+        "stop" : 1577266106054,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "选择编程猫账号登录",
+      "time" : {
+        "start" : 1577266106054,
+        "stop" : 1577266117605,
+        "duration" : 11551
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "点击账号，并切换成FastInputIME输入法输入username183",
+      "time" : {
+        "start" : 1577266117605,
+        "stop" : 1577266119927,
+        "duration" : 2322
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "点击密码，输入password183",
+      "time" : {
+        "start" : 1577266119928,
+        "stop" : 1577266122356,
+        "duration" : 2428
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "切换回正常输入法并点击登录按钮",
+      "time" : {
+        "start" : 1577266122356,
+        "stop" : 1577266126669,
+        "duration" : 4313
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "校验是否成功登录并进入首页，推荐按钮text校验：推荐, 最新按钮text校验：最新",
+      "time" : {
+        "start" : 1577266127139,
+        "stop" : 1577266127521,
+        "duration" : 382
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 8,
+    "hasContent" : true
+  }, {
+    "name" : "stop_and_run_nemo",
+    "time" : {
+      "start" : 1577266127522,
+      "stop" : 1577266132549,
+      "duration" : 5027
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "第一种方法，启动App（包名）",
+      "time" : {
+        "start" : 1577266129928,
+        "stop" : 1577266132549,
+        "duration" : 2621
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    验证作品详情页再创作按钮的\"稍后打开\"功能是否正常\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "点击“最新”",
+      "time" : {
+        "start" : 1577266134890,
+        "stop" : 1577266138935,
+        "duration" : 4045
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "点击“我的”",
+      "time" : {
+        "start" : 1577266138936,
+        "stop" : 1577266139676,
+        "duration" : 740
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "获取自己昵称",
+      "time" : {
+        "start" : 1577266139676,
+        "stop" : 1577266140045,
+        "duration" : 369
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "点击“发现”",
+      "time" : {
+        "start" : 1577266140045,
+        "stop" : 1577266140675,
+        "duration" : 630
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "找寻作品，如果不是自己名字，才点击进去(点进去如果找不到再创作按钮（即不开源），退出滑动再寻找)",
+      "time" : {
+        "start" : 1577266140675,
+        "stop" : 1577266531044,
+        "duration" : 390369
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "获取再创作数",
+      "time" : {
+        "start" : 1577266531044,
+        "stop" : 1577266531894,
+        "duration" : 850
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "点击再创作按钮",
+      "time" : {
+        "start" : 1577266531894,
+        "stop" : 1577266532974,
+        "duration" : 1080
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "校验弹出页面的title是否等于“再创作也是学习的好方式”",
+      "time" : {
+        "start" : 1577266532974,
+        "stop" : 1577266533202,
+        "duration" : 228
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "点击“学习代码”",
+      "time" : {
+        "start" : 1577266533202,
+        "stop" : 1577266533641,
+        "duration" : 439
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "此时点击“稍后打开”按钮",
+      "time" : {
+        "start" : 1577266533641,
+        "stop" : 1577266534174,
+        "duration" : 533
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "校验是否弹出toast：\"已加入我的作品，稍后可在我的中查看\"",
+      "time" : {
+        "start" : 1577266534174,
+        "stop" : 1577266534242,
+        "duration" : 68
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "退出作品详情页",
+      "time" : {
+        "start" : 1577266534242,
+        "stop" : 1577266534691,
+        "duration" : 449
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "找寻刚才的作品，点击进去",
+      "time" : {
+        "start" : 1577266534691,
+        "stop" : 1577266535971,
+        "duration" : 1280
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "获取此时的再创作数rework_number_now",
+      "time" : {
+        "start" : 1577266535971,
+        "stop" : 1577266538027,
+        "duration" : 2056
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "退出作品详情页",
+      "time" : {
+        "start" : 1577266538028,
+        "stop" : 1577266538551,
+        "duration" : 523
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "点击“我的”",
+      "time" : {
+        "start" : 1577266538551,
+        "stop" : 1577266540493,
+        "duration" : 1942
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "校验草稿箱第一个作品名字包含之前获取的作品名",
+      "time" : {
+        "start" : 1577266540493,
+        "stop" : 1577266540723,
+        "duration" : 230
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "step in \"Tear down\" from conftest.py",
+      "time" : {
+        "start" : 1577266540727,
+        "stop" : 1577266543264,
+        "duration" : 2537
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "获取设备udid",
+        "time" : {
+          "start" : 1577266540727,
+          "stop" : 1577266543136,
+          "duration" : 2409
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "停止运行Nemo",
+        "time" : {
+          "start" : 1577266543136,
+          "stop" : 1577266543264,
+          "duration" : 128
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "step in \"Tear down\" from conftest.py",
+      "time" : {
+        "start" : 1577266543272,
+        "stop" : 1577266555145,
+        "duration" : 11873
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "获取设备udid",
+        "time" : {
+          "start" : 1577266543272,
+          "stop" : 1577266545685,
+          "duration" : 2413
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "为避免正在运行先停止",
+        "time" : {
+          "start" : 1577266545685,
+          "stop" : 1577266545783,
+          "duration" : 98
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "第一种方法，启动App（包名）",
+        "time" : {
+          "start" : 1577266545783,
+          "stop" : 1577266549353,
+          "duration" : 3570
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "点击我的",
+        "time" : {
+          "start" : 1577266549353,
+          "stop" : 1577266550983,
+          "duration" : 1630
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "点击设置按钮",
+        "time" : {
+          "start" : 1577266550983,
+          "stop" : 1577266552433,
+          "duration" : 1450
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "从下滑到上（两次）",
+        "time" : {
+          "start" : 1577266552433,
+          "stop" : 1577266553713,
+          "duration" : 1280
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "点击退出登录",
+        "time" : {
+          "start" : 1577266553713,
+          "stop" : 1577266555145,
+          "duration" : 1432
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 7,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "1a29435e102323ed",
+      "name" : "log",
+      "source" : "1a29435e102323ed.txt",
+      "type" : "text/plain",
+      "size" : 22703
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 28,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "login_and_logout183_module::0",
+    "time" : {
+      "start" : 1577266543271,
+      "stop" : 1577266543272,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "stop_and_run_nemo::0",
+    "time" : {
+      "start" : 1577266540726,
+      "stop" : 1577266540727,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "TC0011"
+  }, {
+    "name" : "story",
+    "value" : "作品再创作-稍后打开"
+  }, {
+    "name" : "tag",
+    "value" : "environment:test"
+  }, {
+    "name" : "feature",
+    "value" : "作品详情页"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "P0"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.WorkDetailPage"
+  }, {
+    "name" : "suite",
+    "value" : "test_work_detail"
+  }, {
+    "name" : "subSuite"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-09Q56GFJ"
+  }, {
+    "name" : "thread",
+    "value" : "3408-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.WorkDetailPage.test_work_detail"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "TAPD-缺陷",
+    "url" : "https://www.tapd.cn/47849719/bugtrace/bugreports/my_view",
+    "type" : "issue"
+  }, {
+    "name" : "蓝湖",
+    "url" : "https://lanhuapp.com/web/#/item/project/product?focusItem=825c5b9a-bfef-4910-9302-1789d761bf42&pid=959752fe-24c5-48ba-a1ad-38a8caaf5862&docId=040f1304-c481-4d3e-9900-fc832422ae99&docType=axure&pageId=1cb4203398864bffb00f2b2de88cd24e&image_id=040f1304-c481-4d3e-9900-fc832422ae99&parentId=77f1514d-d7e5-43d5-8bbf-caff6ee02f9b",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "P0", "TC0011", "environment:test" ]
+  },
+  "source" : "b8967159f1884b64.json",
+  "parameterValues" : [ ]
+}

@@ -1,112 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="24eb6264-67de-420c-91cd-01f96c0e71cf" name="Default Changelist" comment="" />
-=======
-    <list default="true" id="24eb6264-67de-420c-91cd-01f96c0e71cf" name="Default Changelist" comment="">
+    <list default="true" id="7d429ebd-3fdb-4681-9126-3d02175554ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/read_excel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/从模板创作.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dir_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/history/work_detail20191219backup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CloudPage/test_cloud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/DiscoverPage/test_course.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/DiscoverPage/test_create.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/DiscoverPage/test_discovery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/DraftPage/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/DraftPage/test_draft_mould.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/DraftPage/test_draft_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/WorkDetailPage/test_work_detail.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/categories.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history/t_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/history/t_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history/台式.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/history/笔记本.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/attachments/258d85c309db3eb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/attachments/2cc39a81b949cd9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/attachments/4209d46b67448e8f.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/attachments/6e0935966ea0003.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/attachments/79a151a94021d636.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/attachments/f1d24245f5a1fae8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/behaviors.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/categories.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/packages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/suites.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/test-cases/2a107358347b20d2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/test-cases/52609b56c9b9e719.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/data/timeline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/export/influxDbData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/export/mail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/export/prometheusData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/history/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/history/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/history/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/history/history.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/history/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/plugins/behaviors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/plugins/packages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/plugins/screen-diff/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/plugins/screen-diff/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/duration.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/executors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/severity.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/status-chart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/html/widgets/summary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/1013a439-28c0-4c66-bd59-001978da362e-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/3fc41b28-4d66-4abc-8166-efbc8eef94ae-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/53872c45-81db-40c4-8086-b035346f277c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/69ce8994-4c1a-4007-a8ec-991b26275b18-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/74628d13-209b-4ba5-be20-c32f903f3c48-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/7724bd59-b2d6-41d8-8fa4-1cde5856366a-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/9de13e6e-a88e-408e-a089-252841ddf713-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/a9ad781e-d012-4ad0-8f36-f6fdc768ba9e-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/e654a2c4-9235-4a24-9aa6-6707a78ff695-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/eef7458e-831b-4610-8058-ba876565a217-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/xml/environment.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/MainPage/test_login1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/MainPage/test_login.py" afterDir="false" />
     </list>
->>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="AutoNemoUI" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
+    <favorites_list name="nemo_ui" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< Updated upstream
-  <component name="ProjectFrameBounds" extendedState="6">
-=======
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/history/123.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="7">
->>>>>>> Stashed changes
-    <option name="x" value="862" />
-    <option name="y" value="16" />
-    <option name="width" value="914" />
-    <option name="height" value="922" />
-  </component>
-  <component name="ProjectId" id="1T8kzM8qlRgkh2mQZren7TcyvyO" />
+  <component name="ProjectId" id="1UrcfcuHzYUNQE4NMZ5Aub1wTBh" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-<<<<<<< Updated upstream
-=======
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="nemo_ui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemo_ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nemo_ui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemo_ui" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-    </panes>
-  </component>
->>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PyLib\nemo_ui\tests\NewBCM" />
-      <recent name="D:\PyLib\nemo_ui\tests\MainPage" />
-      <recent name="D:\PyLib\AutoNemoUI" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PyLib\nemo_ui\history" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PyLib\nemo_ui" />
+      <recent name="D:\PyLib\nemo_ui\common" />
+      <recent name="D:\PyLib\nemo_ui\tests\DraftPage" />
+      <recent name="D:\PyLib\nemo_ui\data" />
+      <recent name="D:\PyLib\nemo_ui\tests\DiscoverPage" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.run_path">
-    <configuration name="遍历创作页内按钮" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test_work_detail">
+    <configuration name="test_cloud" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nemo_ui" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -114,11 +129,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AllFunction" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/CloudPage" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AllFunction/遍历创作页内按钮.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/CloudPage/test_cloud.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,7 +142,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_discovery" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nemo_ui" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,11 +150,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/DiscoverPage" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conftest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/DiscoverPage/test_discovery.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,7 +163,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="login_test_env" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_draft_mould" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nemo_ui" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -156,11 +171,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AllFunction" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/DraftPage" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AllFunction/login_test_env.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/DraftPage/test_draft_mould.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,7 +184,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_path" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_draft_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nemo_ui" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,11 +192,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/DraftPage" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_path.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/DraftPage/test_draft_page.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,7 +205,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_login" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_work_detail" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nemo_ui" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -198,11 +213,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/WorkDetailPage" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\PyLib\nemo_ui\history\t_login.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/WorkDetailPage/test_work_detail.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -211,16 +226,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.conftest" />
-      <item itemvalue="Python.login_test_env" />
-      <item itemvalue="Python.run_path" />
-      <item itemvalue="Python.test_login" />
-      <item itemvalue="Python.遍历创作页内按钮" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_path" />
+        <item itemvalue="Python.test_work_detail" />
+        <item itemvalue="Python.test_cloud" />
+        <item itemvalue="Python.test_draft_page" />
+        <item itemvalue="Python.test_draft_mould" />
+        <item itemvalue="Python.test_discovery" />
       </list>
     </recent_temporary>
   </component>
@@ -241,124 +253,71 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="24eb6264-67de-420c-91cd-01f96c0e71cf" name="Default Changelist" comment="" />
-      <created>1572849371323</created>
+      <changelist id="7d429ebd-3fdb-4681-9126-3d02175554ab" name="Default Changelist" comment="" />
+      <created>1576118258995</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572849371323</updated>
+      <updated>1576118258995</updated>
     </task>
-    <task id="LOCAL-00001" summary="添加环境迁移freeze生成的requirements.txt文件">
-      <created>1573195863714</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1573195863714</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-<<<<<<< Updated upstream
-=======
-  <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-  </component>
->>>>>>> Stashed changes
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加环境迁移freeze生成的requirements.txt文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加环境迁移freeze生成的requirements.txt文件" />
-  </component>
   <component name="WindowStateProjectService">
-<<<<<<< Updated upstream
-    <state width="1260" height="169" key="GridCell.Tab.0.bottom" timestamp="1575963312984">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1260" height="169" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1575963312984" />
-    <state width="1877" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575617925775" />
-    <state width="1260" height="169" key="GridCell.Tab.0.center" timestamp="1575963312984">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1260" height="169" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1575963312984" />
-    <state width="1877" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575617925775" />
-    <state width="1260" height="169" key="GridCell.Tab.0.left" timestamp="1575963312983">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1260" height="169" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1575963312983" />
-    <state width="1877" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575617925775" />
-    <state width="1260" height="169" key="GridCell.Tab.0.right" timestamp="1575963312984">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1260" height="169" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1575963312984" />
-    <state width="1877" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575617925775" />
-    <state x="311" y="0" width="657" height="760" key="find.popup" timestamp="1575964743678">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="311" y="0" width="657" height="760" key="find.popup/0.0.1280.760@0.0.1280.760" timestamp="1575964743678" />
-=======
-    <state width="1877" height="261" key="GridCell.Tab.0.bottom" timestamp="1575629038411">
+    <state x="552" y="178" key="#Inspections" timestamp="1576734540693">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1260" height="169" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1575626300107" />
-    <state width="1877" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575629038411" />
-    <state width="1877" height="261" key="GridCell.Tab.0.center" timestamp="1575629038411">
+    <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1576734540693" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576829987709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1260" height="169" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1575626300107" />
-    <state width="1877" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575629038411" />
-    <state width="1877" height="261" key="GridCell.Tab.0.left" timestamp="1575629038411">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576829987709" />
+    <state x="640" y="246" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576639258712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1260" height="169" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1575626300107" />
-    <state width="1877" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575629038411" />
-    <state width="1877" height="261" key="GridCell.Tab.0.right" timestamp="1575629038411">
+    <state x="640" y="246" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576639258712" />
+    <state x="663" y="135" key="#test_create" timestamp="1577079153557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1260" height="169" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1575626300107" />
-    <state width="1877" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575629038411" />
->>>>>>> Stashed changes
+    <state x="663" y="135" key="#test_create/0.0.1920.1040@0.0.1920.1040" timestamp="1577079153557" />
+    <state x="493" y="201" key="FileChooserDialogImpl" timestamp="1577258658303">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="493" y="201" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1577258658303" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576829132344" />
+    <state width="1260" height="169" key="GridCell.Tab.0.bottom" timestamp="1577266959822">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="169" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1577266959822" />
+    <state width="1877" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577189640585" />
+    <state width="1260" height="169" key="GridCell.Tab.0.center" timestamp="1577266959822">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="169" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1577266959822" />
+    <state width="1877" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577189640585" />
+    <state width="1260" height="169" key="GridCell.Tab.0.left" timestamp="1577266959822">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="169" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1577266959822" />
+    <state width="1877" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577189640585" />
+    <state width="1260" height="169" key="GridCell.Tab.0.right" timestamp="1577266959822">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1260" height="169" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1577266959822" />
+    <state width="1877" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577189640585" />
+    <state x="335" y="87" key="MultipleFileMergeDialog" timestamp="1577269871242">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="335" y="87" key="MultipleFileMergeDialog/0.0.1280.760@0.0.1280.760" timestamp="1577269871242" />
+    <state x="751" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577099509935">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="751" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577099509935" />
+    <state x="626" y="242" width="807" height="622" key="find.popup" timestamp="1577078133165">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="626" y="242" width="807" height="622" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577078133165" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1576652976340">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576652976340" />
   </component>
 </project>

@@ -1,0 +1,26 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "作品详情页",
+    "children" : [ {
+      "name" : "作品再创作-稍后打开",
+      "children" : [ {
+        "name" : "test_work_detail_seven",
+        "uid" : "b8967159f1884b64",
+        "parentUid" : "1c6d7aaf45cf1befb5c08ba333e25c7f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1577266132550,
+          "stop" : 1577266540724,
+          "duration" : 408174
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1c6d7aaf45cf1befb5c08ba333e25c7f"
+    } ],
+    "uid" : "6bdd90126d3d312e944cb477a6f071a3"
+  } ]
+}

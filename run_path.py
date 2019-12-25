@@ -19,12 +19,16 @@ from data.cfg import ENV
 
 if __name__ == '__main__':
     # 运行全部test用例
+    # 生成报告前把categories.json放到报告的xml文件夹里（通过复制）
+    # sys.path[n]在不同环境下可能不同,所以统一放前面
     path_xml = os.path.join(sys.path[1], r"report\xml")
     path_html = os.path.join(sys.path[1], r"report\html")
     path_report = os.path.join(sys.path[1], r"report")
+    path_categories_filename = os.path.join(sys.path[1], r"data\categories.json")
     # 先删除report文件夹(report文件夹为空时会报错，到时候注释掉即可)
     subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
     pytest.main(["--tb=line", "--alluredir", path_xml])
+    # pytest.main(["--lf", "--tb=line", "--alluredir", path_xml])
     # pytest.main(["--ff", "--alluredir", path_xml])
     # 可在path_html目录里使用python -m http.server命令供他人访问报告
     subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
@@ -35,8 +39,5 @@ if __name__ == '__main__':
         file_obj.write("Environment={}\n".format(ENV))
         file_obj.write("PackageName=com.codemao.nemo\n")
         file_obj.write("ActivityName=com.codemao.nemo.MainActivityV2")
-    # 生成报告前把categories.json放到报告的xml文件夹里（通过复制）
-    # sys.path[n]在不同环境下可能不同
-    path_categories_filename = os.path.join(sys.path[2], r"categories.json")
     subprocess.run(r'copy ' + path_categories_filename + ' ' + path_xml, shell=True, check=True)
     subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)

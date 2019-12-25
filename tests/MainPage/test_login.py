@@ -15,14 +15,19 @@ from logs.my_logger import MyLog
 logger = MyLog().getlog()
 
 
-@allure.tag(f"environment:{ENV}", "P0", "TC0001")
-@allure.feature('登录测试')
-# @allure.story('用例1')
-@allure.severity('important')
-@allure.testcase('http://u.pmdaniu.com/nWLp', name='测试用例链接')
-@allure.issue('https://phab.srv.codemao.cn/T15769', name='task-phabricator')
-def test_env_login_one(login_and_logout183):
+@allure.tag(f"environment:{ENV}", 'TC0000')
+@allure.feature('登录页')
+@allure.story('编程猫账号登录')
+@allure.severity('critical')  # 优先级，包含blocker, critical, normal, minor, trivial 几个不同的等级
+@allure.testcase('https://lanhuapp.com/web/#/item/project/product?focusItem=825c5b9a-bfef-4910-9302-1789d761bf42&pid='
+                 '959752fe-24c5-48ba-a1ad-38a8caaf5862&docId=040f1304-c481-4d3e-9900-fc832422ae99&docType=axure&pageId'
+                 '=1cb4203398864bffb00f2b2de88cd24e&image_id=040f1304-c481-4d3e-9900-fc832422ae99&parentId=77f1514d-d7'
+                 'e5-43d5-8bbf-caff6ee02f9b', name='蓝湖')
+@allure.issue('https://www.tapd.cn/47849719/bugtrace/bugreports/my_view', name='TAPD-缺陷')
+@pytest.mark.P0
+def test_env_login_one(login_and_logout183_module, stop_and_run_nemo):
     '''
+    验证是否可以正常登录Nemo
     启动App
     点击切换环境按钮
     选择test环境并等待0.5s
@@ -37,8 +42,7 @@ def test_env_login_one(login_and_logout183):
     # d.implicitly_wait(10.0)
     # set delay 0.5s after each UI click and click
     d.click_post_delay = 0.5  # default no delay
-
-    # set default element wait timeout (seconds)
+    d.implicitly_wait(10.0)
     d.wait_timeout = 30.0  # default 20.0
     # print(d.info)
 
@@ -136,6 +140,6 @@ if __name__ == '__main__':
     # 先删除report文件夹
     subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
     # # pytest.main(["-s", "-q", "--alluredir", path_xml])
-    pytest.main(["-s", "-q", "test_login1.py", "--alluredir", path_xml])
+    pytest.main(["-s", "-q", "test_login.py", "--alluredir", path_xml])
     subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
     subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)

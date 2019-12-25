@@ -8,18 +8,18 @@ from logs.my_logger import MyLog
 from time import sleep
 from common.read_excel import read_excel
 from dir_config import testdatas_dir
-filename=testdatas_dir+"从模板创作.xlsx"
 
-test_datas=list(read_excel(filename,'data'))
+filename = testdatas_dir + "从模板创作.xlsx"
+
+test_datas = list(read_excel(filename, 'data'))
 
 # print(filename)
 '''
-起始页：未登录点击进入Nemo第一页
+测试从模板创作
 '''
 
 # 调用日志模块
 logger = MyLog().getlog()
-
 
 
 @allure.tag(f"environment:{ENV}", "P0", "TC2005")
@@ -29,8 +29,8 @@ logger = MyLog().getlog()
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.smoke
 @pytest.mark.hzj1
-# login_and_logout183
-def test_env_draft_mould(login_and_logout183):
+# login_and_logout183_module, stop_and_run_nemo
+def test_env_draft_mould(login_and_logout183_module, stop_and_run_nemo):
     '''
     登录成功后，通过‘从模板创作’创建作品可以成功
     '''
@@ -57,10 +57,10 @@ def test_env_draft_mould(login_and_logout183):
             sleep(5)
         with allure.step('进入从模板创作：{}'.format(tv_name)):
             logger.info('从模板创做作品‘{}’'.format(tv_name))
-            for i in range(0,j-1):
+            for i in range(0, j - 1):
                 d.swipe_ext("left", scale=0.8)
                 sleep(3)
-            logger.info('左滑{}次'.format(j-1))
+            logger.info('左滑{}次'.format(j - 1))
             logger.info('模板的序号为：{}'.format(d(resourceId='com.codemao.nemo:id/index').get_text()))
             logger.info('模板的名称为：{}'.format(d(resourceId='com.codemao.nemo:id/tv_name').get_text()))
             logger.info('模板的说明为：{}'.format(d(resourceId='com.codemao.nemo:id/tv_content').get_text()))
@@ -84,10 +84,22 @@ def test_env_draft_mould(login_and_logout183):
         logger.info('{}-副本，创建成功'.format(tv_name))
 
 
-
-
-
 if __name__ == '__main__':
-    a=test_env_draft_mould()
+    import subprocess
+    import sys
+    import os
 
-
+    # pytest.main(["-v", "test_ban_and_recover_login.py"])
+    # pytest.main(["-v", "-s", "test_ban_and_recover_login.py"])
+    # pytest.main(["-v", "--setup-show", "test_ban_and_recover_login.py"])
+    # 运行全部test用例
+    path_xml = os.path.join(sys.path[1], r"report\xml")
+    path_html = os.path.join(sys.path[1], r"report\html")
+    path_report = os.path.join(sys.path[1], r"report")
+    # 先删除report文件夹
+    subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
+    # # pytest.main(["-s", "-q", "--alluredir", path_xml])
+    pytest.main(["-s", "-q", "test_draft_mould.py", "--alluredir", path_xml])
+    # pytest.main(["-lf", "-q", "-s", "test_work_detail.py", "--alluredir", path_xml])
+    subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
+    subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)

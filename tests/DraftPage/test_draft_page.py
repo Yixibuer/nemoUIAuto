@@ -23,7 +23,8 @@ logger = MyLog().getlog()
 @allure.severity('important')
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.smoke
-def test_env_login_one(login_and_logout183):
+@pytest.mark.hzj
+def test_env_login_one(login_and_logout183_zijun):
     '''
       启动App
     点击切换环境按钮
@@ -54,7 +55,7 @@ def test_env_login_one(login_and_logout183):
 @allure.severity('important')
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.smoke
-def test_env_deaft_two(login_and_logout183):
+def test_env_deaft_two(login_and_logout183_zijun):
     '''
     登录后点击自由创作后，作品可以新增成功
     '''
@@ -96,7 +97,7 @@ def test_env_deaft_two(login_and_logout183):
 @allure.severity('important')
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.smoke
-def test_env_deaft_three(login_and_logout183):
+def test_env_deaft_three(login_and_logout183_zijun):
     '''
     登录成功后，新增作品可以存储在草稿箱，草稿箱数目变与新增数相同
     '''
@@ -137,7 +138,7 @@ def test_env_deaft_three(login_and_logout183):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.smoke
 @pytest.mark.hzj
-def test_env_draft_four(login_and_logout183):
+def test_env_draft_four(login_and_logout183_zijun):
     '''
     登录成功后，通过‘边学边做’可以新增作品成功
     '''
@@ -186,7 +187,7 @@ def test_env_draft_four(login_and_logout183):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.smoke
 @pytest.mark.hzj
-def test_env_draft_tc2006(login_and_logout183):
+def test_env_draft_tc2006(login_and_logout183_zijun):
     '''
     登录成功后：
     1.进入 我的
@@ -268,7 +269,7 @@ def test_env_draft_tc2006(login_and_logout183):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.smoke
 @pytest.mark.hzj
-def test_env_draft_tc2007(login_and_logout183):
+def test_env_draft_tc2007(login_and_logout183_zijun):
     '''
     登录成功后：
     进入 我的
@@ -277,7 +278,10 @@ def test_env_draft_tc2007(login_and_logout183):
     清空作品名
     取消重命名作品，作品名称不变
     输入新的名称，确认修改名称
-    修改名称成功
+    保存成功后，比较修改后的值与输入值相同
+    输入20字以上可以保存成功
+    小于20字，输入全英文可以保存成功
+    输入小于20字的中一个中英文可以保存成功
     '''
     d = u2.connect(f"{udid}")
     d.click_post_delay = 0.5  # default no delay
@@ -329,8 +333,8 @@ def test_env_draft_tc2007(login_and_logout183):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.smoke
 @pytest.mark.hzj
-#login_and_logout183
-def test_env_draft_tc2008(login_and_logout183):
+#login_and_logout183_zijun
+def test_env_draft_tc2008(login_and_logout183_zijun):
     '''
     登录成功后：
     进入 我的
@@ -340,7 +344,7 @@ def test_env_draft_tc2008(login_and_logout183):
     回到我的页面，点击取消发布
     二次确认时，选择“保留发布”，作品没有取消发布
     二次确认时，选择“取消发布”，作品取消发布
-
+    重复操作10次发布、取消可以成功
     '''
     d = u2.connect(f"{udid}")
     d.click_post_delay = 0.5  # default no delay
@@ -387,5 +391,63 @@ def test_env_draft_tc2008(login_and_logout183):
         sleep(5)
         logger.info("有删除按钮")
         # assert d(resourceId='com.codemao.nemo:id/remove_iv').exists()== 1
+        for i in range(20):
+            with allure.step("点击发作品"):
+                logger.info('点击发布')
+                d(resourceId="com.codemao.nemo:id/pub_iv").click()
+                sleep(5)
+                logger.info("跳转发布页面")
+                logger.info("点击发布")
+                d.click(0.887, 0.061)
+                sleep(5)
+
+            recommend = d.xpath('//*[@text="推荐"]')
+            newest = d.xpath('//*[@text="最新"]')
+            with allure.step('校验是否成功登录并进入首页，推荐按钮text校验：{}, 最新按钮text校验：{}'.format(
+                    recommend.get_text(), newest.get_text())):
+                logger.info('校验是否成功登录并进入首页')
+                assert recommend.get_text() == "推荐"
+                assert newest.get_text() == "最新"
+            with allure.step("二次确认是否取消发布"):
+                d(resourceId="com.codemao.nemo:id/mine_rb").click()
+                sleep(3)
+                d(resourceId="com.codemao.nemo:id/pub_iv").click()
+                sleep(5)
+                logger.info("二次确认时点击保留发布")
+                assert d(resourceId="com.codemao.nemo:id/tv_content").get_text() == "取消发布作品后他人将无法看到你的作品。"
+                d(resourceId="com.codemao.nemo:id/tv_confirm").click()
+                logger.info("作品没有取消发布成功")
+                logger.info("没有删除按钮")
+                assert d(resourceId='com.codemao.nemo:id/remove_iv').exists() == 0
+                assert d
+                sleep(2)
+                logger.info("点击取消发布")
+                d(resourceId="com.codemao.nemo:id/pub_iv").click()
+                d(resourceId="com.codemao.nemo:id/tv_cancel").click()
+                logger.info("作品取消发布成功")
+                sleep(5)
+                logger.info("有删除按钮")
+                # assert d(resourceId='com.codemao.nemo:id/remove_iv').exists()== 1
+
 
 # a=test_env_draft_tc2008()
+
+if __name__ == '__main__':
+    import subprocess
+    import sys
+    import os
+
+    # pytest.main(["-v", "test_ban_and_recover_login.py"])
+    # pytest.main(["-v", "-s", "test_ban_and_recover_login.py"])
+    # pytest.main(["-v", "--setup-show", "test_ban_and_recover_login.py"])
+    # 运行全部test用例
+    path_xml = os.path.join(sys.path[1], r"report\xml")
+    path_html = os.path.join(sys.path[1], r"report\html")
+    path_report = os.path.join(sys.path[1], r"report")
+    # 先删除report文件夹
+    subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
+    # # pytest.main(["-s", "-q", "--alluredir", path_xml])
+    pytest.main(["-s", "-q", "test_draft_page.py", "--alluredir", path_xml])
+    # pytest.main(["-lf", "-q", "-s", "test_work_detail.py", "--alluredir", path_xml])
+    subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
+    subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)

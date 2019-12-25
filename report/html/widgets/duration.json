@@ -1,0 +1,11 @@
+[ {
+  "uid" : "b8967159f1884b64",
+  "name" : "test_work_detail_seven",
+  "time" : {
+    "start" : 1577266132550,
+    "stop" : 1577266540724,
+    "duration" : 408174
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
