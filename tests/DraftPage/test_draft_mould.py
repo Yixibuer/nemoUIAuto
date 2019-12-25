@@ -88,11 +88,6 @@ if __name__ == '__main__':
     import subprocess
     import sys
     import os
-
-    # pytest.main(["-v", "test_ban_and_recover_login.py"])
-    # pytest.main(["-v", "-s", "test_ban_and_recover_login.py"])
-    # pytest.main(["-v", "--setup-show", "test_ban_and_recover_login.py"])
-    # 运行全部test用例
     path_xml = os.path.join(sys.path[1], r"report\xml")
     path_html = os.path.join(sys.path[1], r"report\html")
     path_report = os.path.join(sys.path[1], r"report")
