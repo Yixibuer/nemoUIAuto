@@ -617,6 +617,138 @@ def test_work_detail_seven(login_and_logout183_module, stop_and_run_nemo):
         assert work_name in work_name_box
 
 
+@allure.tag(f"environment:{ENV}", "TC0012")
+@allure.feature('作品详情页')
+@allure.story('作品再创作-稍后打开')
+@allure.severity('normal')  # 优先级，包含blocker, critical, normal, minor, trivial 几个不同的等级
+@allure.testcase('https://lanhuapp.com/web/#/item/project/product?focusItem=825c5b9a-bfef-4910-9302-1789d761bf42&pid='
+                 '959752fe-24c5-48ba-a1ad-38a8caaf5862&docId=040f1304-c481-4d3e-9900-fc832422ae99&docType=axure&pageId'
+                 '=1cb4203398864bffb00f2b2de88cd24e&image_id=040f1304-c481-4d3e-9900-fc832422ae99&parentId=77f1514d-d7'
+                 'e5-43d5-8bbf-caff6ee02f9b', name='蓝湖')
+@allure.issue('https://www.tapd.cn/47849719/bugtrace/bugreports/my_view', name='TAPD-缺陷')
+@pytest.mark.P0
+def test_work_detail_eight(login_and_logout183_module, stop_and_run_nemo):
+    '''
+    验证作品详情页里关注按钮功能是否有效
+    '''
+    d = u2.connect(f"{udid}")  # alias for u2.connect_usb('98899a474a4c535541')621QTCQH222F2
+    # 这个用例的“稍后打开”消失较快，所以用0s间隔去点击
+    d.click_post_delay = 0.5  # default no delay
+    d.implicitly_wait(10.0)
+    d.wait_timeout = 30.0  # default 20.0
+    with allure.step('点击“最新”'):
+        logger.info('点击“最新”')
+        d(text="最新").click()
+
+    with allure.step('点击“我的”'):
+        logger.info('点击“我的”')
+        d(resourceId="com.codemao.nemo:id/mine_rb").click()
+
+    with allure.step('获取自己昵称'):
+        logger.info('获取自己昵称')
+        my_name = d(resourceId="com.codemao.nemo:id/author_name_tv").get_text()
+
+    with allure.step('点击“发现”'):
+        logger.info('点击“发现”')
+        d(resourceId="com.codemao.nemo:id/discover_rb").click()
+
+    with allure.step('找寻作品，如果不是自己名字，才点击进去(点进去按钮是已关注，退出滑动再寻找)'):
+        logger.info('找寻作品，如果不是自己名字，才点击进去(点进去按钮是已关注，退出滑动再寻找)')
+        while True:
+            logger.info('找寻作品，如果不是自己名字，才点击进去')
+            # 自动匹配第一个，即使有多个元素拥有此ID
+            user_name = d(resourceId="com.codemao.nemo:id/tv_user_name").get_text()
+            if user_name == my_name:
+                d.swipe_ext("up", scale=0.1)
+            else:
+                d(text=user_name).click()
+                time.sleep(1)
+                work_name = d(resourceId="com.codemao.nemo:id/tv_work_name").get_text()
+                tv_follow = d(resourceId="com.codemao.nemo:id/tv_follow").get_text()
+                if tv_follow == "已关注":
+                    logger.info('退出作品详情页')
+                    d(resourceId="com.codemao.nemo:id/iv_back").click()
+                    time.sleep(0.5)
+                    d.swipe_ext("up", scale=0.1)
+                else:
+                    break
+
+    with allure.step('点击下面关注按钮，关注作者'):
+        logger.info('点击下面关注按钮，关注作者')
+        d(resourceId="com.codemao.nemo:id/tv_follow").click()
+
+    with allure.step('点击作者头像进入作者个人首页'):
+        logger.info('点击作者头像进入作者个人首页')
+        d(resourceId="com.codemao.nemo:id/iv_user_avatar").click()
+
+    with allure.step('点击粉丝,进入粉丝列表'):
+        logger.info('点击粉丝,进入粉丝列表')
+        d(resourceId="com.codemao.nemo:id/tv_fan_num").click()
+
+    with allure.step('查看粉丝列表是否有我的名字'):
+        logger.info('查看粉丝列表是否有我的名字')
+        while True:
+            logger.info('找寻粉丝列表')
+            # 自动匹配第一个，即使有多个元素拥有此ID
+            if not d(resourceId="com.codemao.nemo:id/tv_user_name").exists():
+                logger.info('粉丝列表为空')
+                break
+            user_name = d(resourceId="com.codemao.nemo:id/tv_user_name").get_text()
+            if user_name != my_name:
+                d.swipe_ext("up", scale=0.1)
+                if d(text="喵~已经到最后啦！").exists():
+                    for view in d(resourceId="com.codemao.nemo:id/tv_user_name"):
+                        if view.get_text() == my_name:
+                            logger.info('已找到我的名字')
+                            break
+                    raise Exception("我的名字不在粉丝列表中")
+            elif user_name == my_name:
+                logger.info('已找到我的名字')
+                break
+            else:
+                raise Exception("未知错误")
+
+    with allure.step('后退两步回到作品详情页，点击取消关注'):
+        logger.info('后退两步回到作品详情页，点击取消关注')
+        d.press("back")
+        d.press("back")
+        time.sleep(1)
+        d(text="已关注").click()
+
+    with allure.step('检验弹出toast是否为：您已经取消了对Ta的关注'):
+        logger.info('检验弹出toast是否为：您已经取消了对Ta的关注')
+        message = d.toast.get_message()
+        assert "您已经取消了对Ta的关注" in message
+
+    with allure.step('点击作者头像进入作者个人首页'):
+        logger.info('点击作者头像进入作者个人首页')
+        d(resourceId="com.codemao.nemo:id/iv_user_avatar").click()
+
+    with allure.step('点击粉丝,进入粉丝列表'):
+        logger.info('点击粉丝,进入粉丝列表')
+        d(resourceId="com.codemao.nemo:id/tv_fan_num").click()
+
+    with allure.step('查看粉丝列表应该没有我的名字'):
+        logger.info('查看粉丝列表应该没有我的名字')
+        while True:
+            logger.info('找寻粉丝列表')
+            # 自动匹配第一个，即使有多个元素拥有此ID
+            user_name = d(resourceId="com.codemao.nemo:id/tv_user_name").get_text()
+            if user_name != my_name:
+                d.swipe_ext("up", scale=0.1)
+                if d(text="喵~已经到最后啦！").exists():
+                    for view in d(resourceId="com.codemao.nemo:id/tv_user_name"):
+                        if view.get_text() == my_name:
+                            logger.info('已找到我的名字')
+                            raise Exception("我的名字还在粉丝列表中")
+                    break
+            elif user_name == my_name:
+                logger.info('已找到我的名字')
+                raise Exception("我的名字还在粉丝列表中")
+            else:
+                raise Exception("未知错误")
+
+
 if __name__ == '__main__':
     import subprocess
     import sys
@@ -632,7 +764,7 @@ if __name__ == '__main__':
     # 先删除report文件夹
     subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
     # # pytest.main(["-s", "-q", "--alluredir", path_xml])
-    pytest.main(["-s", "-q", "test_work_detail.py::test_work_detail_seven", "--alluredir", path_xml])
+    pytest.main(["-s", "-q", "test_work_detail.py", "--alluredir", path_xml])
     # pytest.main(["-lf", "-q", "-s", "test_work_detail.py", "--alluredir", path_xml])
     subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
     subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)
