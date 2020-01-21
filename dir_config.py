@@ -18,10 +18,11 @@ cur_dir=os.path.split(os.path.abspath(__file__))[0]
 # print(cur_dir,type(cur_dir))
 
 
-testcase_dir=cur_dir+'\\test_case\\'
+testcase_dir=cur_dir+'\\tests\\'
 
-htmlreport_dir=cur_dir+'/reports/'
+htmlreport_dir=cur_dir+'\\report\\'
 
-log_dict=cur_dir+'/logs/'
+log_dict=cur_dir+'\\logs\\'
 
 testdatas_dir=cur_dir+'\\data\\'
+

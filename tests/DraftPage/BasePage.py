@@ -111,14 +111,26 @@ class BasePage:
         返回设备上所有的appname
         :return:
         '''
-        return  self.d.app_list()
+        import subprocess
+        aa = udid
+        order = 'adb -s {} shell pm list packages'.format(aa)  # adb shell pm list packages
+        print(order)
+        '''
+            :return: 已连接设备名
+            '''
+        # getstatusoutpu为元组，index为0时为状态，成功时为0，失败为1，后面为输出字符串，strip去除首尾空格
+        pudid = subprocess.getstatusoutput(order)[1].strip()
+        str2 = pudid.split('\n')
+        str2.remove(str2[0])
+        app_list = [i.split(':')[1] for i in str2]
+        return app_list
 
     def app_current(self):
         '''
         返回设备上所有的appname
         :return:
         '''
-        self.logger.info('当前运行的app信息为：{}'.format(self.d.app_current()))
+        # self.logger.info('当前运行的app信息为：{}'.format(self.d.app_current()))
         return  self.d.app_current()
 
     # 显示等待时长
@@ -211,8 +223,8 @@ if __name__ == '__main__':
     # d.element_click('id',ll_Share_link)
     # d(resourceId="com.codemao.nemo:id/scroll_view").swipe("left", steps=10)
     # print(d.ele_exist(resourceId=scroll_view.id))
-    # d.send_text('aaaa')
-    d.logger.info('aa')
+    d.send_text('2<3]OzU(!h')
+    # d.logger.info('aa')
 
 
 

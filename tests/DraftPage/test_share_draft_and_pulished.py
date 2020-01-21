@@ -97,7 +97,7 @@ wx_install=app_currrent()[3]
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
 @pytest.mark.skipif(wx_install==0,reason='设备没有安装微信')
 # @pytest.mark.skipif(qq_install==0,reason='设备没有安装QQ')
-def test_draft_share_tc2015(login_and_logout183):
+def test_draft_share_tc2015(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享到微信好友
     复制一个作品
@@ -133,7 +133,7 @@ def test_draft_share_tc2015(login_and_logout183):
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
 @pytest.mark.skipif(wx_install==0,reason='设备没有安装微信')
 # @pytest.mark.skipif(qq_install==0,reason='设备没有安装QQ')
-def test_draft_share_tc2016(login_and_logout183):
+def test_draft_share_tc2016(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享到微信朋友圈
     复制一个作品
@@ -163,7 +163,7 @@ def test_draft_share_tc2016(login_and_logout183):
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
 @pytest.mark.skipif(qq_install==0,reason='设备没有安装QQ')
-def test_draft_share_tc2017(login_and_logout183):
+def test_draft_share_tc2017(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享到QQ好友
     复制一个作品
@@ -195,7 +195,7 @@ def test_draft_share_tc2017(login_and_logout183):
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
 # @pytest.mark.skipif(wx_install==0,reason='设备没有安装微信')
 @pytest.mark.skipif(qq_install==0,reason='设备没有安装QQ')
-def test_draft_share_tc2018(login_and_logout183):
+def test_draft_share_tc2018(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享到QQ空间
     复制一个作品
@@ -224,7 +224,7 @@ def test_draft_share_tc2018(login_and_logout183):
 @allure.issue('https://www.tapd.cn/47849719/bugtrace/bugreports/my_view', name='TAPD-缺陷')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_draft_share_tc2019(login_and_logout183):
+def test_draft_share_tc2019(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享链接
     复制一个作品
@@ -254,7 +254,7 @@ def test_draft_share_tc2019(login_and_logout183):
 @allure.issue('暂无', name='TAPD-缺陷')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=1,reruns_delay=2)
-def test_draft_share_tc2020(login_and_logout183):
+def test_draft_share_tc2020(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享图片
     复制一个作品
@@ -299,7 +299,7 @@ def test_draft_share_tc2020(login_and_logout183):
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
 @pytest.mark.run(order=1)
-def test_draft_share_tc2021(login_and_logout183):
+def test_draft_share_tc2021(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享喵口令
     复制一个作品
@@ -340,7 +340,7 @@ def test_draft_share_tc2021(login_and_logout183):
 @allure.issue('暂无', name='TAPD-缺陷')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_draft_share_tc2022(login_and_logout183):
+def test_draft_share_tc2022(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享
     生成取消分享，回到草稿箱页面
@@ -369,7 +369,7 @@ def test_draft_share_tc2022(login_and_logout183):
 @allure.issue('暂无', name='TAPD-缺陷')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_draft_share_tc2023(login_and_logout183):
+def test_draft_share_tc2023(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享
     生成图片成功后取消分享，回到草稿箱页面
@@ -397,7 +397,7 @@ def test_draft_share_tc2023(login_and_logout183):
 @allure.issue('暂无', name='TAPD-缺陷')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_draft_share_tc2024(login_and_logout183):
+def test_draft_share_tc2024(login_and_logout190):
     '''
     验证作品详情页分享按钮功能是否正常---草稿箱分享
     喵口令生成成功后取消分享，回到草稿箱页面
@@ -441,7 +441,7 @@ def pubilsh_share():
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
 @pytest.mark.skipif(wx_install==0,reason='设备没有安装微信')
 # @pytest.mark.skipif(qq_install==0,reason='设备没有安装QQ')
-def test_pulished_share_tc2025(login_and_logout183):
+def test_pulished_share_tc2025(login_and_logout190):
     '''
     进入已发布作品详情页
     点击分享
@@ -472,7 +472,7 @@ def test_pulished_share_tc2025(login_and_logout183):
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
 @pytest.mark.skipif(wx_install==0,reason='设备没有安装微信')
 # @pytest.mark.skipif(qq_install==0,reason='设备没有安装QQ')
-def test_pulished_share_tc2026(login_and_logout183):
+def test_pulished_share_tc2026(login_and_logout190):
     '''
     进入已发布作品详情页
     点击分享
@@ -503,7 +503,7 @@ def test_pulished_share_tc2026(login_and_logout183):
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
 # @pytest.mark.skipif(wx_install==0,reason='设备没有安装微信')
 @pytest.mark.skipif(qq_install==0,reason='设备没有安装QQ')
-def test_pulished_share_tc2027(login_and_logout183):
+def test_pulished_share_tc2027(login_and_logout190):
     '''
     进入已发布作品详情页
     点击分享
@@ -533,7 +533,7 @@ def test_pulished_share_tc2027(login_and_logout183):
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
 # @pytest.mark.skipif(wx_install==0,reason='设备没有安装微信')
 @pytest.mark.skipif(qq_install==0,reason='设备没有安装QQ')
-def test_pulished_share_tc2028(login_and_logout183):
+def test_pulished_share_tc2028(login_and_logout190):
     '''
     进入已发布作品详情页
     点击分享
@@ -561,7 +561,7 @@ def test_pulished_share_tc2028(login_and_logout183):
 @allure.issue('暂无', name='TAPD-缺陷')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_pulished_share_tc2029(login_and_logout183):
+def test_pulished_share_tc2029(login_and_logout190):
     '''
     进入已发布作品详情页
     点击分享
@@ -590,7 +590,7 @@ def test_pulished_share_tc2029(login_and_logout183):
 @allure.issue('暂无', name='TAPD-缺陷')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_pulished_share_tc2030(login_and_logout183):
+def test_pulished_share_tc2030(login_and_logout190):
     '''
     进入已发布作品详情页
     点击分享
@@ -608,17 +608,18 @@ def test_pulished_share_tc2030(login_and_logout183):
     d.logger.info(f"{a}运行成功")
 
 if __name__ == '__main__':
+    print(app_currrent())
     # pytest.main(["-k", "2006"])
-    import subprocess
-    import sys
-    import os
-
-    path_xml = os.path.join(sys.path[1], r"report\xml")
-    path_html = os.path.join(sys.path[1], r"report\html")
-    path_report = os.path.join(sys.path[1], r"report")
-    # 先删除report文件夹
-    subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
-    # # pytest.main(["-s", "-q", "--alluredir", path_xml])
-    pytest.main(["-s", "-q", "test_share_draft_and_pulished.py", "--alluredir", path_xml])
-    subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
-    subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)
+    # import subprocess
+    # import sys
+    # import os
+    #
+    # path_xml = os.path.join(sys.path[1], r"report\xml")
+    # path_html = os.path.join(sys.path[1], r"report\html")
+    # path_report = os.path.join(sys.path[1], r"report")
+    # # 先删除report文件夹
+    # subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
+    # # # pytest.main(["-s", "-q", "--alluredir", path_xml])
+    # pytest.main(["-s", "-q", "test_share_draft_and_pulished.py", "--alluredir", path_xml])
+    # subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
+    # subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)

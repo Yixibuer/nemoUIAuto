@@ -9,34 +9,17 @@ import time
 # 调用日志模块
 logger = MyLog().getlog()
 
-def clear_before_login():
-    """'清除app缓存并登录"""
-    d = u2.connect(f"{udid}")
-    with allure.step('清除app缓存并登录'):
-        d.app_clear("com.codemao.nemo")
-        d.app_start("com.codemao.nemo")
-        d(resourceId="com.codemao.nemo:id/iv_Login_account").click(timeout=10)
-        d.set_fastinput_ime(True)  # 切换成FastInputIME输入法
-        d(resourceId="com.codemao.nemo:id/edit_user_name").click(timeout=10)
-        d(focused=True).clear_text()
-        d.send_keys(f"{username183}")  # adb广播输入
-        # d(focused=True).set_text(f"{username183}")
-        logger.info('点击密码，输入password183')
-        d(resourceId="com.codemao.nemo:id/et_password").click(timeout=10)
-        d(focused=True).clear_text()
-        d(focused=True).set_text(f"{password183}")
-        d.set_fastinput_ime(False)  # 切换成正常的输入法
-        d(resourceId="com.codemao.nemo:id/bt_Login").click(timeout=10)
+
 
 import re
 @allure.tag(f"environment:{ENV}", "P0", "TC2001")
 @allure.feature('草稿箱测试')
-# @allure.story('用例1')
 @allure.severity('important')
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
+@pytest.mark.run(order=1)
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_login_tc2001(login_and_logout183):
+def test_env_login_tc2001(login_and_logout190):
     '''
       启动App
     点击切换环境按钮
@@ -49,7 +32,6 @@ def test_env_login_tc2001(login_and_logout183):
     d.click_post_delay = 0.5  # default no delay
     # set default element wait timeout (seconds)
     d.wait_timeout = 30.0  # default 20.0
-    clear_before_login()
     with allure.step('点击物品的，进入草稿箱'):
         logger.info('进入我的页面')
         d(resourceId="com.codemao.nemo:id/mine_rb").click(timeout=10)
@@ -62,12 +44,11 @@ def test_env_login_tc2001(login_and_logout183):
 
 @allure.tag(f"environment:{ENV}", "P0", "TC2002")
 @allure.feature('草稿箱测试')
-# @allure.story('用例1')
 @allure.severity('important')
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_deaft_tc2002(login_and_logout183):
+def test_env_deaft_tc2002(login_and_logout190):
     '''
     登录后点击自由创作后，作品可以新增成功
     新增作品名称为“新的作品”
@@ -105,7 +86,7 @@ def test_env_deaft_tc2002(login_and_logout183):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=1,reruns_delay=2)
-def test_env_deaft_tc2003(login_and_logout183):
+def test_env_deaft_tc2003(login_and_logout190):
     '''
     登录成功后，通過自由創作可以新增作品可以存储在草稿箱，草稿箱数目变与新增数相同,新增2个作品
     '''
@@ -140,7 +121,7 @@ def test_env_deaft_tc2003(login_and_logout183):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_tc2004(login_and_logout183):
+def test_env_draft_tc2004(login_and_logout190):
     '''
     登录成功后，通过‘边学边做’可以新增作品成功,新增一个作品
     '''
@@ -177,7 +158,14 @@ def test_env_draft_tc2004(login_and_logout183):
 
 
 
-test_datas=[{'num': 1, 'index': '1/8', 'name': '地底寻宝', 'content': '跟随编程猫寻找宝藏，了解旋转的奥秘吧'}, {'num': 2, 'index': '2/8', 'name': '源码画板', 'content': '拿起画笔，成为源码世界的小小艺术家'}, {'num': 3, 'index': '3/8', 'name': '唱片机', 'content': '播放音乐，唱出欢快乐曲'}, {'num': 4, 'index': '4/8', 'name': '声控捕鱼', 'content': '大喊轰隆隆，看谁抓的鱼儿多'}, {'num': 5, 'index': '5/8', 'name': '贪吃猴', 'content': '操控摇杆，帮助雷电猴吃到更多电力吧'}, {'num': 6, 'index': '6/8', 'name': '飞翔的蓝雀', 'content': '冲破阻碍，向着蓝天自由飞翔吧'}, {'num': 7, 'index': '7/8', 'name': '躲避弹球', 'content': '左右倾斜，帮助阿短躲避疯狂弹球吧'}, {'num': 8, 'index': '8/8', 'name': '丛林爬爬', 'content': '丛林爬呀爬，躲避飞镖谁最行'}]
+test_datas=[{'num': 1, 'index': '1/8', 'name': '地底寻宝', 'content': '跟随编程猫寻找宝藏，了解旋转的奥秘吧'},
+            {'num': 2, 'index': '2/8', 'name': '源码画板', 'content': '拿起画笔，成为源码世界的小小艺术家'},
+            {'num': 3, 'index': '3/8', 'name': '唱片机', 'content': '播放音乐，唱出欢快乐曲'},
+            {'num': 4, 'index': '4/8', 'name': '声控捕鱼', 'content': '大喊轰隆隆，看谁抓的鱼儿多'},
+            {'num': 5, 'index': '5/8', 'name': '贪吃猴', 'content': '操控摇杆，帮助雷电猴吃到更多电力吧'},
+            {'num': 6, 'index': '6/8', 'name': '飞翔的蓝雀', 'content': '冲破阻碍，向着蓝天自由飞翔吧'},
+            {'num': 7, 'index': '7/8', 'name': '躲避弹球', 'content': '左右倾斜，帮助阿短躲避疯狂弹球吧'},
+            {'num': 8, 'index': '8/8', 'name': '丛林爬爬', 'content': '丛林爬呀爬，躲避飞镖谁最行'}]
 
 
 @allure.tag(f"environment:{ENV}", "P0", "TC2005")
@@ -186,7 +174,7 @@ test_datas=[{'num': 1, 'index': '1/8', 'name': '地底寻宝', 'content': '跟�
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_mould_tc2005(login_and_logout183):
+def test_env_draft_mould_tc2005(login_and_logout190):
     '''
     登录成功后，通过‘从模板创作’创建作品可以成功
     '''
@@ -236,13 +224,14 @@ def test_env_draft_mould_tc2005(login_and_logout183):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_tc2006(login_and_logout183):
+def test_env_draft_tc2006(login_and_logout190):
     '''
     登录成功后：
     1.进入 我的
     2.复制草稿箱内作品
     3.点击上传，作品上传
     4.点击删除，可以删除成功
+    以下P0取消
     5.重复复制4次可以复制成功
     6.可以重复删除4次
     7.每次复制后都加编号，第一次复制直接为“副本”，没有编号
@@ -250,8 +239,7 @@ def test_env_draft_tc2006(login_and_logout183):
     '''
     d = u2.connect(f"{udid}")
     d.click_post_delay = 0.5  # default no delay
-    # set default element wait timeout (seconds)
-    clear_before_login()
+
     d.wait_timeout = 30.0  # default 20.0
     d(resourceId="com.codemao.nemo:id/mine_rb").click(timeout=10)
     with allure.step("点击复制"):
@@ -310,12 +298,11 @@ def test_env_draft_tc2006(login_and_logout183):
 
 @allure.tag(f"environment:{ENV}", "P0", "TC2007")
 @allure.feature('草稿箱测试')
-# @allure.story('用例1')
 @allure.severity('important')
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_tc2007(login_and_logout183):
+def test_env_draft_tc2007(login_and_logout190):
     '''
     登录成功后：
     进入 我的
@@ -373,7 +360,7 @@ def test_env_draft_tc2007(login_and_logout183):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_tc2008(login_and_logout183):
+def test_env_draft_tc2008(login_and_logout190):
     '''
     登录成功后：
     进入 我的
@@ -386,8 +373,6 @@ def test_env_draft_tc2008(login_and_logout183):
     '''
     d = u2.connect(f"{udid}")
     d.click_post_delay = 0.5  # default no delay
-    # set default element wait timeout (seconds)
-    clear_before_login()
     d.wait_timeout = 30.0  # default 20.0
     d(resourceId="com.codemao.nemo:id/mine_rb").click(timeout=10)
     with allure.step("点击复制"):
@@ -399,7 +384,6 @@ def test_env_draft_tc2008(login_and_logout183):
         logger.info('点击发布')
         d(resourceId="com.codemao.nemo:id/pub_iv").click(timeout=10)
         logger.info("跳转发布页面")
-        logger.info("点击发布,非原生按钮")
         d(resourceId="com.codemao.nemo:id/tv_publish").click(timeout=10)
 
 

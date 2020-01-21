@@ -772,3 +772,53 @@ def login_and_logout183_module(request):
             d(resourceId="com.codemao.nemo:id/tv_logout").click()
 
     request.addfinalizer(my_tear_down)
+
+
+@pytest.fixture(scope='module')
+def login_and_logout190(request):
+    '''
+    前置：
+    重启App，选择编程猫账号登录，点击编程猫账号，切换FastInputIME输入法，输入账号密码，点击确定。校验首页发现text和我的text
+    request.addfinalizer(func)和yield相比不同的是：无论是固件的“setup”部分是否出现异常或断言失败，它都会执行。
+    此外它还支持传入多个函数。
+    :param request:
+    :return:
+    '''
+    d = u2.connect(f"{udid}")  # alias for u2.connect_usb('98899a474a4c535541')621QTCQH222F2
+    d.click_post_delay = 0.5  # default no delay
+    d.wait_timeout = 30.0  # default 20.0
+    # #第一种方法，启动App（包名）
+    #为避免正在运行先停止
+    logger.info("*"*20+'hzj'+'用例开始啦'+"*"*20)
+    d.app_clear("com.codemao.nemo")
+    d.app_start("com.codemao.nemo")
+    d.app_wait("com.codemao.nemo", front=True) # 等待应用前台运行
+    d.app_wait("com.codemao.nemo", timeout=5.0) # 最长等待时间20s（默认）
+    pid = d.app_wait("com.codemao.nemo") # 等待应用运行, return pid(int)
+    if not pid:
+        print("com.codemao.nemo is not running")
+    else:
+        print("com.codemao.nemo pid is %d" % pid)
+
+    with allure.step('选择编程猫账号登录'):
+        d.set_fastinput_ime(True)
+        logger.info('选择编程猫账号登录')
+        time.sleep(1)
+        d(resourceId="com.codemao.nemo:id/iv_Login_account").click()
+        d(resourceId="com.codemao.nemo:id/edit_user_name").click()
+        d(focused=True).clear_text()
+        d(focused=True).set_text(f"{username183}")
+        time.sleep(0.5)
+        logger.info('点击密码，输入password183')
+        d(resourceId="com.codemao.nemo:id/et_password").click()
+        d(focused=True).clear_text()
+        d(focused=True).set_text(f"{password183}")
+        time.sleep(0.5)
+        d(resourceId="com.codemao.nemo:id/bt_Login").click()
+        time.sleep(0.5)
+        d.set_fastinput_ime(False)  # 切换成正常的输入法
+
+    yield
+    logger.info("*"*20+'hzj'+'用例结束啦'+"*"*20)
+    d.app_clear('com.codemao.nemo')
+
