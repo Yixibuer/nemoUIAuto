@@ -670,6 +670,27 @@ def login_and_logout183_module(request):
     #     logger.info('选择test环境并等待0.5s')
     #     d(resourceId="com.codemao.nemo:id/tv_test").click()
     #     time.sleep(0.5)
+    with allure.step('如果没有退出登录先退出'):
+        logger.info('如果没有退出登录先退出')
+        if d(resourceId="com.codemao.nemo:id/mine_rb").exists(timeout=3):
+            with allure.step('点击我的'):
+                logger.info('点击我的')
+                # 退出登录
+                d(resourceId="com.codemao.nemo:id/mine_rb").click()
+
+            with allure.step('点击设置按钮'):
+                logger.info('点击设置按钮')
+                d(resourceId="com.codemao.nemo:id/left_view").click()
+
+            with allure.step('从下滑到上（两次）'):
+                logger.info('从下滑到上（两次）')
+                # d.swipe(0.582, 0.904, 0.539, 0.631, 0.5)  # swipe for 0.5s(default)
+                d.swipe_ext("up", scale=0.2)
+                d.swipe_ext("up", scale=0.2)
+
+            with allure.step('点击退出登录'):
+                logger.info('点击退出登录')
+                d(text="退出当前账号").click()
 
     with allure.step('选择编程猫账号登录'):
         logger.info('选择编程猫账号登录')
@@ -762,14 +783,12 @@ def login_and_logout183_module(request):
         with allure.step('从下滑到上（两次）'):
             logger.info('从下滑到上（两次）')
             # d.swipe(0.582, 0.904, 0.539, 0.631, 0.5)  # swipe for 0.5s(default)
-            el = d.xpath('//*[@resource-id="com.codemao.nemo:id/rl_enter"]').get()
-            el.swipe("up")  # 从下滑到上
-            el = d.xpath('//*[@resource-id="com.codemao.nemo:id/rl_about"]').get()
-            el.swipe("up")  # 从下滑到上
+            d.swipe_ext("up", scale=0.2)
+            d.swipe_ext("up", scale=0.2)
 
         with allure.step('点击退出登录'):
             logger.info('点击退出登录')
-            d(resourceId="com.codemao.nemo:id/tv_logout").click()
+            d(text="退出当前账号").click()
 
     request.addfinalizer(my_tear_down)
 
