@@ -48,7 +48,7 @@ def test_env_login_tc2001(login_and_logout190):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_deaft_tc2002(login_and_logout190):
+def test_env_deaft_tc2002(stop_app):
     '''
     登录后点击自由创作后，作品可以新增成功
     新增作品名称为“新的作品”
@@ -81,12 +81,11 @@ def test_env_deaft_tc2002(login_and_logout190):
 
 @allure.tag(f"environment:{ENV}", "P0", "TC2003")
 @allure.feature('草稿箱测试')
-# @allure.story('用例1')
 @allure.severity('important')
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=1,reruns_delay=2)
-def test_env_deaft_tc2003(login_and_logout190):
+def test_env_deaft_tc2003(stop_app):
     '''
     登录成功后，通過自由創作可以新增作品可以存储在草稿箱，草稿箱数目变与新增数相同,新增2个作品
     '''
@@ -121,7 +120,7 @@ def test_env_deaft_tc2003(login_and_logout190):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_tc2004(login_and_logout190):
+def test_env_draft_tc2004(stop_app):
     '''
     登录成功后，通过‘边学边做’可以新增作品成功,新增一个作品
     '''
@@ -174,7 +173,7 @@ test_datas=[{'num': 1, 'index': '1/8', 'name': '地底寻宝', 'content': '跟�
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_mould_tc2005(login_and_logout190):
+def test_env_draft_mould_tc2005(stop_app):
     '''
     登录成功后，通过‘从模板创作’创建作品可以成功
     '''
@@ -224,7 +223,7 @@ def test_env_draft_mould_tc2005(login_and_logout190):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_tc2006(login_and_logout190):
+def test_env_draft_tc2006(stop_app):
     '''
     登录成功后：
     1.进入 我的
@@ -302,7 +301,7 @@ def test_env_draft_tc2006(login_and_logout190):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_tc2007(login_and_logout190):
+def test_env_draft_tc2007(stop_app):
     '''
     登录成功后：
     进入 我的
@@ -360,7 +359,7 @@ def test_env_draft_tc2007(login_and_logout190):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_draft_tc2008(login_and_logout190):
+def test_env_draft_tc2008(stop_app):
     '''
     登录成功后：
     进入 我的

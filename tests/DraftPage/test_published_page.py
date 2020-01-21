@@ -48,7 +48,7 @@ def edit_published():
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_login_tc2009(login_and_logout190):
+def test_env_login_tc2009(stop_app):
     '''
     登录后修改已发布作品的信息
     点击进入已发布作品
@@ -85,7 +85,7 @@ def test_env_login_tc2009(login_and_logout190):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_login_tc2010(login_and_logout190):
+def test_env_login_tc2010(stop_app):
     '''
     选择编程猫账号登录
     登录后修改已发布作品的信息
@@ -156,7 +156,7 @@ def test_env_login_tc2010(login_and_logout190):
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_login_tc2011(login_and_logout190):
+def test_env_login_tc2011(stop_app):
     '''
      选择编程猫账号登录
     登录后修改已发布作品的信息
@@ -225,6 +225,7 @@ def test_env_login_tc2031(login_and_logout190):
                 logger.info("第一个作品为不开源，把它改为开源")
                 logger.info("点击右上角...")
                 d(resourceId="com.codemao.nemo:id/iv_more").click()
+                sleep(0.5)
                 logger.info("点击编辑信息")
                 d(resourceId="com.codemao.nemo:id/tv_item_name", text="编辑信息").click()
                 # logger.info("点击_代码开源按钮，非原生")
@@ -260,7 +261,7 @@ def test_env_login_tc2031(login_and_logout190):
 @pytest.mark.P0
 @pytest.mark.run(order=3)
 @pytest.mark.flaky(reruns=1,reruns_delay=2)
-def test_env_login_tc2032(login_and_logout190):
+def test_env_login_tc2032(stop_app):
     '''
     修改作品信息:如果作品为不开源作品,则可以修改为开源
     '''
@@ -276,6 +277,7 @@ def test_env_login_tc2032(login_and_logout190):
         sleep(1)
         d(resourceId="com.codemao.nemo:id/iv_more").click()
         logger.info("点击编辑信息")
+        sleep(1)
         d(resourceId="com.codemao.nemo:id/tv_item_name", text="编辑信息").click()
         # logger.info("点击_代码开源按钮，非原生")
         sleep(1)
@@ -295,7 +297,7 @@ def test_env_login_tc2032(login_and_logout190):
 @pytest.mark.P0
 @pytest.mark.run(order=4)
 @pytest.mark.flaky(reruns=1,reruns_delay=2)
-def test_env_login_tc2012(login_and_logout190):
+def test_env_login_tc2012(stop_app):
     '''
     修改作品信息__不影响作品的开源状态
     启动App
@@ -355,7 +357,7 @@ def test_env_login_tc2012(login_and_logout190):
 @pytest.mark.P0
 @pytest.mark.run(order=2)
 @pytest.mark.flaky(reruns=1,reruns_delay=2)
-def test_env_login_tc2013(login_and_logout190):
+def test_env_login_tc2013(stop_app):
     '''
     编辑积木————不影响作品的闭源状态
     启动App
@@ -428,7 +430,7 @@ import re
 @allure.testcase('https://shimo.im/sheets/VOAWVRwnN0i8FYkZ/ylQht', name='测试用例链接')
 @pytest.mark.P0
 @pytest.mark.flaky(reruns=3,reruns_delay=2)
-def test_env_login_tc2014(login_and_logout190):
+def test_env_login_tc2014(stop_app):
     '''
     登录后修改已发布作品的信息
     点击进入已发布作品

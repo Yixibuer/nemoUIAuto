@@ -818,7 +818,13 @@ def login_and_logout190(request):
         time.sleep(0.5)
         d.set_fastinput_ime(False)  # 切换成正常的输入法
 
-    yield
-    logger.info("*"*20+'hzj'+'用例结束啦'+"*"*20)
-    d.app_clear('com.codemao.nemo')
+    # yield
+    # logger.info("*"*20+'hzj'+'用例结束啦'+"*"*20)
+    # d.app_clear('com.codemao.nemo')
 
+@pytest.fixture()
+def stop_app(request):
+    d = u2.connect(f"{udid}")
+    logger.info("*" * 20 + '关闭app再打开' + "*" * 20)
+    d.app_stop('com.codemao.nemo')
+    d.app_start('com.codemao.nemo')
