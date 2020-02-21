@@ -7,6 +7,8 @@ import allure
 
 # 调用日志模块
 logger = MyLog().getlog()
+
+
 @allure.tag(f"environment:{ENV}", "TC3001")
 @allure.feature('个人中心')
 @allure.story('验证可进入个人资料页面')
@@ -70,7 +72,7 @@ def test_change_avatar_two(login_and_logout183_module, stop_and_run_nemo):
 
     with allure.step('点击第三个头像'):
         logger.info('点击第三个头像')
-        d.click(0.821, 0.231)
+        d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[3]').click()
 
     with allure.step('验证修改成功'):
         message = d.toast.get_message()
@@ -100,43 +102,44 @@ def test_change_avatar_two(login_and_logout183_module, stop_and_run_nemo):
         message = d.toast.get_message()
         assert "修改头像成功" in message and "训练师编号" in d(resourceId="com.codemao.nemo:id/tv_user_id").get_text()
 
-    with allure.step('点击头像'):
-        logger.info('点击头像')
-        d(resourceId="com.codemao.nemo:id/iv_user_avatar").click()
-
-    with allure.step('点击加号,如果有权限提示，选择开启权限'):
-        logger.info('点击加号，如果有权限提示，选择开启权限')
-        d(resourceId="com.codemao.nemo:id/iv_add").click()
-        if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
-            d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
-        if d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[2]').exists:
-            logger.info('已进入手机相册')
-        else:
-            return "unknown error"
-
-    with allure.step('点击“拍摄照片”,如果有权限提示，选择开启权限'):
-        logger.info('点击“拍摄照片”,如果有权限提示，选择开启权限')
-        d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[1]').click()
-        if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
-            d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
-
-    with allure.step('点击拍照按钮'):
-        logger.info('点击拍照按钮')
-        d(resourceId="com.huawei.camera:id/shutter_button").click()
-
-    with allure.step('点击确认'):
-        logger.info('点击确认')
-        d(resourceId="com.huawei.camera:id/btn_done").click()
-        d(resourceId="com.codemao.nemo:id/tv_confirm").click()
-
-    with allure.step('验证修改成功'):
-        message = d.toast.get_message()
-        assert "修改头像成功" in message and "训练师编号" in d(resourceId="com.codemao.nemo:id/tv_user_id").get_text()
+    # with allure.step('点击头像'):
+    #     logger.info('点击头像')
+    #     d(resourceId="com.codemao.nemo:id/iv_user_avatar").click()
+    #
+    # with allure.step('点击加号,如果有权限提示，选择开启权限'):
+    #     logger.info('点击加号，如果有权限提示，选择开启权限')
+    #     d(resourceId="com.codemao.nemo:id/iv_add").click()
+    #     if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
+    #         d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
+    #     if d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[2]').exists:
+    #         logger.info('已进入手机相册')
+    #     else:
+    #         return "unknown error"
+    #
+    # with allure.step('点击“拍摄照片”,如果有权限提示，选择开启权限'):
+    #     logger.info('点击“拍摄照片”,如果有权限提示，选择开启权限')
+    #     d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[1]').click()
+    #     d.wait_timeout = 30.0
+    #     if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
+    #         d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
+    #
+    # with allure.step('点击拍照按钮'):
+    #     logger.info('点击拍照按钮')
+    #     d(resourceId="com.huawei.camera:id/shutter_button").click()
+    #
+    # with allure.step('点击确认'):
+    #     logger.info('点击确认')
+    #     d(resourceId="com.huawei.camera:id/btn_done").click()
+    #     d(resourceId="com.codemao.nemo:id/tv_confirm").click()
+    #
+    # with allure.step('验证修改成功'):
+    #     message = d.toast.get_message()
+    #     assert "修改头像成功" in message and "训练师编号" in d(resourceId="com.codemao.nemo:id/tv_user_id").get_text()
 
     with allure.step('恢复默认头像'):
         logger.info('恢复默认头像')
         d(resourceId="com.codemao.nemo:id/iv_user_avatar").click()
-        d.click(0.821, 0.231)
+        d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[3]').click()
 
 
 @allure.tag(f"environment:{ENV}", "TC3003")
@@ -173,7 +176,7 @@ def test_change_cover_three(login_and_logout183_module, stop_and_run_nemo):
 
     with allure.step('点击第二个封面'):
         logger.info('点击第二个封面')
-        d.click(0.718, 0.19)
+        d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]').click()
 
     with allure.step('验证封面上传成功'):
         logger.info('验证封面上传成功')
@@ -205,44 +208,45 @@ def test_change_cover_three(login_and_logout183_module, stop_and_run_nemo):
         message = d.toast.get_message()
         assert "封面上传成功" in message and "训练师编号" in d(resourceId="com.codemao.nemo:id/tv_user_id").get_text()
 
-    with allure.step('点击封面'):
-        logger.info('点击封面')
-        d(resourceId="com.codemao.nemo:id/iv_user_cover").click()
-
-    with allure.step('点击加号,如果有权限提示，选择开启权限'):
-        logger.info('点击加号，如果有权限提示，选择开启权限')
-        d(resourceId="com.codemao.nemo:id/iv_add").click()
-        if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
-            d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
-        if d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[2]').exists:
-            logger.info('已进入手机相册')
-        else:
-            return "unknown error"
-
-    with allure.step('点击“拍摄照片”,如果有权限提示，选择开启权限'):
-        logger.info('点击“拍摄照片”,如果有权限提示，选择开启权限')
-        d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[1]').click()
-        if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
-            d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
-
-    with allure.step('点击拍照按钮'):
-        logger.info('点击拍照按钮')
-        d(resourceId="com.huawei.camera:id/shutter_button").click()
-
-    with allure.step('点击确认'):
-        logger.info('点击确认')
-        d(resourceId="com.huawei.camera:id/btn_done").click()
-        d(resourceId="com.codemao.nemo:id/tv_confirm").click()
-
-    with allure.step('验证封面上传成功'):
-        logger.info('验证封面上传成功')
-        message = d.toast.get_message()
-        assert "封面上传成功" in message and "训练师编号" in d(resourceId="com.codemao.nemo:id/tv_user_id").get_text()
+    # with allure.step('点击封面'):
+    #     logger.info('点击封面')
+    #     d(resourceId="com.codemao.nemo:id/iv_user_cover").click()
+    #
+    # with allure.step('点击加号,如果有权限提示，选择开启权限'):
+    #     logger.info('点击加号，如果有权限提示，选择开启权限')
+    #     d(resourceId="com.codemao.nemo:id/iv_add").click()
+    #     if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
+    #         d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
+    #     if d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[2]').exists:
+    #         logger.info('已进入手机相册')
+    #     else:
+    #         return "unknown error"
+    #
+    # with allure.step('点击“拍摄照片”,如果有权限提示，选择开启权限'):
+    #     logger.info('点击“拍摄照片”,如果有权限提示，选择开启权限')
+    #     d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[1]').click()
+    #     d.wait_timeout = 30.0
+    #     if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
+    #         d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
+    #
+    # with allure.step('点击拍照按钮'):
+    #     logger.info('点击拍照按钮')
+    #     d(resourceId="com.huawei.camera:id/shutter_button").click()
+    #
+    # with allure.step('点击确认'):
+    #     logger.info('点击确认')
+    #     d(resourceId="com.huawei.camera:id/btn_done").click()
+    #     d(resourceId="com.codemao.nemo:id/tv_confirm").click()
+    #
+    # with allure.step('验证封面上传成功'):
+    #     logger.info('验证封面上传成功')
+    #     message = d.toast.get_message()
+    #     assert "封面上传成功" in message and "训练师编号" in d(resourceId="com.codemao.nemo:id/tv_user_id").get_text()
 
     with allure.step('恢复默认封面'):
         logger.info('恢复默认封面')
         d(resourceId="com.codemao.nemo:id/iv_user_cover").click()
-        d.click(0.718, 0.19)
+        d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]').click()
 
 
 @allure.tag(f"environment:{ENV}", "TC3004")
@@ -283,7 +287,7 @@ def test_edit_page_change_avatar_four(login_and_logout183_module, stop_and_run_n
 
     with allure.step('点击第三个头像'):
         logger.info('点击第三个头像')
-        d.click(0.821, 0.231)
+        d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[3]').click()
 
     with allure.step('验证修改成功'):
         message = d.toast.get_message()
@@ -316,10 +320,11 @@ def test_edit_page_change_avatar_four(login_and_logout183_module, stop_and_run_n
         d(resourceId="com.codemao.nemo:id/tv_confirm").click()
 
     with allure.step('验证修改成功'):
+        d.wait_timeout = 50.0
         message = d.toast.get_message()
         assert "修改头像成功" in message
-        d.wait_timeout = 30.0
-        assert d(text='个人资料').exists()
+        d.wait_timeout = 50.0
+        # assert d(text='个人资料').exists()
         if d(text='个人资料').exists():
             logger.info('已返回个人资料编辑页')
             logger.info('修改头像成功')
@@ -327,49 +332,49 @@ def test_edit_page_change_avatar_four(login_and_logout183_module, stop_and_run_n
             logger.info('未返回个人资料编辑页')
             return 'unknown error'
 
-    with allure.step('点击用户头像栏'):
-        logger.info('点击用户头像栏')
-        d(resourceId="com.codemao.nemo:id/rl_user_avatar").click()
-
-    with allure.step('点击加号,如果有权限提示，选择开启权限'):
-        logger.info('点击加号，如果有权限提示，选择开启权限')
-        d(resourceId="com.codemao.nemo:id/iv_add").click()
-        if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
-            d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
-        if d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[2]').exists:
-            logger.info('已进入手机相册')
-        else:
-            return "unknown error"
-
-    with allure.step('点击“拍摄照片”,如果有权限提示，选择开启权限'):
-        logger.info('点击“拍摄照片”,如果有权限提示，选择开启权限')
-        d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[1]').click()
-        if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
-            d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
-
-    with allure.step('点击拍照按钮'):
-        logger.info('点击拍照按钮')
-        d(resourceId="com.huawei.camera:id/shutter_button").click()
-
-    with allure.step('点击确认'):
-        logger.info('点击确认')
-        d(resourceId="com.huawei.camera:id/btn_done").click()
-        d(resourceId="com.codemao.nemo:id/tv_confirm").click()
-
-    with allure.step('验证修改成功'):
-        message = d.toast.get_message()
-        assert "修改头像成功" in message and d(text='个人资料').exists()
-        if d(text='个人资料').exists():
-            logger.info('已返回个人资料编辑页')
-            logger.info('修改头像成功')
-        else:
-            logger.info('未返回个人资料编辑页')
-            return 'unknown error'
+    # with allure.step('点击用户头像栏'):
+    #     logger.info('点击用户头像栏')
+    #     d(resourceId="com.codemao.nemo:id/rl_user_avatar").click()
+    #
+    # with allure.step('点击加号,如果有权限提示，选择开启权限'):
+    #     logger.info('点击加号，如果有权限提示，选择开启权限')
+    #     d(resourceId="com.codemao.nemo:id/iv_add").click()
+    #     if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
+    #         d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
+    #     if d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[2]').exists:
+    #         logger.info('已进入手机相册')
+    #     else:
+    #         return "unknown error"
+    #
+    # with allure.step('点击“拍摄照片”,如果有权限提示，选择开启权限'):
+    #     logger.info('点击“拍摄照片”,如果有权限提示，选择开启权限')
+    #     d.xpath('//*[@resource-id="com.codemao.nemo:id/grid"]/android.widget.FrameLayout[1]').click()
+    #     if d(resourceId="com.android.packageinstaller:id/permission_message").exists():
+    #         d(resourceId="com.android.packageinstaller:id/permission_allow_button").click()
+    #
+    # with allure.step('点击拍照按钮'):
+    #     logger.info('点击拍照按钮')
+    #     d(resourceId="com.huawei.camera:id/shutter_button").click()
+    #
+    # with allure.step('点击确认'):
+    #     logger.info('点击确认')
+    #     d(resourceId="com.huawei.camera:id/btn_done").click()
+    #     d(resourceId="com.codemao.nemo:id/tv_confirm").click()
+    #
+    # with allure.step('验证修改成功'):
+    #     message = d.toast.get_message()
+    #     assert "修改头像成功" in message and d(text='个人资料').exists()
+    #     if d(text='个人资料').exists():
+    #         logger.info('已返回个人资料编辑页')
+    #         logger.info('修改头像成功')
+    #     else:
+    #         logger.info('未返回个人资料编辑页')
+    #         return 'unknown error'
 
     with allure.step('恢复默认头像'):
         logger.info('恢复默认头像')
         d(resourceId="com.codemao.nemo:id/rl_user_avatar").click()
-        d.click(0.821, 0.231)
+        d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[3]').click()
 
 
 @allure.tag(f"environment:{ENV}", "TC3005")
@@ -628,6 +633,7 @@ def test_follow_list_seven(login_and_logout183_module, stop_and_run_nemo):
 
     with allure.step('获取初始关注数'):
         logger.info('获取初始关注数')
+        d.wait_timeout = 50.0
         initial_follow_num = int(d(resourceId='com.codemao.nemo:id/tv_flow_num').get_text())
         logger.info('初始关注数为：%s' % initial_follow_num)
 
@@ -686,47 +692,37 @@ def test_follow_list_seven(login_and_logout183_module, stop_and_run_nemo):
     with allure.step('进入关注列表'):
         logger.info('进入关注列表')
         d(text="关注").click()
-        logger.info('验证列表中有该训练师')
+
+    with allure.step('验证列表中有该训练师,并点击‘已关注’'):
+        logger.info('验证列表中有该训练师,并点击‘已关注’')
         while True:
             logger.info('检查关注列表')
+            d.wait_timeout = 50.0
             if not d(resourceId="com.codemao.nemo:id/tv_user_name").exists():
                 logger.info('关注列表为空')
                 break
             user_name = d(resourceId="com.codemao.nemo:id/tv_user_name").get_text()
             if user_name == new_follow_user:
                 logger.info('已找到该训练师')
+                d.wait_timeout = 50.0
                 d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').click()
-                logger.info('点击"已关注"')
-                assert d(resourceId='com.codemao.nemo:id/tv_follow').get_text() == "关注"
-                logger.info('点击“关注”，验证按钮变为“已关注”')
-                d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').click()
-                assert d(resourceId='com.codemao.nemo:id/tv_follow').get_text() == "已关注"
-                d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').click()
+                logger.info('点击"已关注"，验证按钮变为‘关注’')
+                d.wait_timeout = 100.0
+                assert d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').get_text() == "关注"
                 break
             elif user_name != new_follow_user:
-                d.swipe_ext("up", scale=0.1)
+                d.swipe_ext("up", scale=0.09)
                 if d(text="喵~已经到最后啦！").exists():
                     for i in d(resourceId="com.codemao.nemo:id/tv_user_name"):
                         if i.get_text() == new_follow_user:
                             logger.info('已找到该训练师')
+                            d.wait_timeout = 50.0
                             d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').click()
-                            logger.info('点击"已关注"')
-                            assert d(resourceId='com.codemao.nemo:id/tv_follow').get_text() == "关注"
-                            logger.info('点击“关注”，验证按钮变为“已关注”')
-                            d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').click()
-                            assert d(resourceId='com.codemao.nemo:id/tv_follow').get_text() == "已关注"
-                            d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').click()
+                            logger.info('点击"已关注"，验证按钮变为‘关注’')
+                            d.wait_timeout = 100.0
+                            assert d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').get_text() == "关注"
                             break
                     raise Exception()
-
-    # with allure.step('找到该训练师，并点击“已关注”按钮'):
-    #     logger.info('找到该训练师，并点击“已关注”按钮')
-    #     d(resourceId='com.codemao.nemo:id/tv_follow').click()
-    #     assert d(resourceId='com.codemao.nemo:id/tv_follow').get_text() == "关注"
-    #     logger.info('点击“关注”，验证按钮变为“已关注”')
-    #     d(resourceId='com.codemao.nemo:id/tv_follow').click()
-    #     assert d(resourceId='com.codemao.nemo:id/tv_follow').get_text() == "已关注"
-    #     d(resourceId='com.codemao.nemo:id/tv_follow').click()
 
     with allure.step('返回一步，检查关注数'):
         logger.info('返回一步，检查关注数')
@@ -896,19 +892,22 @@ def test_fun_list_eight(login_and_logout183_module, stop_and_run_nemo):
     with allure.step('找到未关注的训练师，点击关注'):
         logger.info('找到未关注的训练师，点击关注')
         while True:
-            text = d(resourceId='com.codemao.nemo:id/tv_follow').get_text()
-            if text == "关注":
+            follow_text = d(resourceId='com.codemao.nemo:id/tv_follow').get_text()
+            if follow_text == "关注":
                 logger.info('暂未关注该用户')
-                d(resourceId='com.codemao.nemo:id/tv_follow').click()
+                d.wait_timeout = 30.0
                 follow_name = d(resourceId='com.codemao.nemo:id/tv_user_name').get_text()
-                logger.info('点击关注，关注的训练师名字为：%s' % follow_name)
-                text = d(resourceId='com.codemao.nemo:id/tv_follow').get_text()
+                logger.info('将关注的训练师名字为：%s' % follow_name)
+                logger.info('点击关注')
+                d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').click()
+                d.wait_timeout = 30.0
+                follow_text = d(resourceId='com.codemao.nemo:id/tv_follow').get_text()
+                assert follow_text == '已关注'
                 break
             else:
                 logger.info('已关注该用户')
-                d.swipe_ext("up", scale=0.1)
+                d.swipe_ext("up", scale=0.09)
                 continue
-    assert text == '已关注'
 
     with allure.step('返回一步，验证关注数'):
         logger.info('返回一步，验证关注数')
@@ -924,22 +923,25 @@ def test_fun_list_eight(login_and_logout183_module, stop_and_run_nemo):
     with allure.step('找到刚刚关注的训练师，点击“已关注”'):
         logger.info('找到刚刚关注的训练师，点击“已关注”')
         while True:
-            text = d(resourceId='com.codemao.nemo:id/tv_user_name').get_text()
-            if text == follow_name:
+            current_name = d(resourceId='com.codemao.nemo:id/tv_user_name').get_text()
+            if current_name == follow_name:
                 logger.info('已找到该训练师')
-                d(resourceId='com.codemao.nemo:id/tv_follow').click()
+                d.wait_timeout = 50.0
+                d.xpath('//*[@resource-id="com.codemao.nemo:id/swipe_target"]/android.widget.RelativeLayout[2]/android.widget.TextView[2]').click()
                 logger.info('点击已关注')
-                text = d(resourceId='com.codemao.nemo:id/tv_follow').get_text()
+                d.wait_timeout = 50.0
+                follow_text = d(resourceId='com.codemao.nemo:id/tv_follow').get_text()
+                assert follow_text == '关注'
                 break
             else:
                 logger.info('暂未找到该训练师')
-                d.swipe_ext("up", scale=0.1)
+                d.swipe_ext("up", scale=0.09)
                 continue
-    assert text == '关注'
 
     with allure.step('返回一步，验证关注数'):
         logger.info('返回一步，验证关注数')
         d(resourceId="com.codemao.nemo:id/iv_close").click()
+        d.wait_timeout = 50.0
         new_follow_num = int(d(resourceId='com.codemao.nemo:id/tv_flow_num').get_text())
         logger.info('新的关注数为：%s' % new_follow_num)
         assert new_follow_num == initial_follow_num
@@ -1035,7 +1037,7 @@ def test_collect_list_nine(login_and_logout183_module, stop_and_run_nemo):
                 d(resourceId="com.codemao.nemo:id/iv_collect").click()
                 break
             elif initial_first_work_name != d(resourceId="com.codemao.nemo:id/tv_work_name").get_text():
-                d.swipe_ext("up", scale=0.1)
+                d.swipe_ext("up", scale=0.09)
                 continue
             else:
                 logger.info('未找到指定作品')
@@ -1142,7 +1144,7 @@ def test_work_list_ten(login_and_logout183_module, stop_and_run_nemo):
         d(resourceId="com.codemao.nemo:id/iv_collect").click()
         d(resourceId="com.codemao.nemo:id/iv_back").click()
         logger.info('返回检查当前收藏数')
-        d.wait_timeout = 30.0
+        d.wait_timeout = 50.0
         current_collect_num = int(d(resourceId="com.codemao.nemo:id/tv_collect_num").get_text())
         logger.info('现收藏数为%s' % current_collect_num)
         assert current_collect_num == initial_collect_num + 1
