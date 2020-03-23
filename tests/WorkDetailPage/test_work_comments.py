@@ -51,6 +51,7 @@ def test_work_comments_one(login_and_logout183_module, stop_and_run_nemo):
         d(resourceId="com.codemao.nemo:id/edit_content").click()
         d.send_keys("第一级评论")  # adb广播输入
         d.set_fastinput_ime(False)  # 切换成正常的输入法
+        time.sleep(0.5)
         d(resourceId="com.codemao.nemo:id/tv_send_reply").click()  # 点击发送评论
 
     with allure.step('检查第一个评论是否为：第一级评论'):
@@ -71,7 +72,7 @@ def test_work_comments_one(login_and_logout183_module, stop_and_run_nemo):
             content_new = d(resourceId="com.codemao.nemo:id/tv_comment_content").get_text()
             assert "第一级评论" not in content_new
         else:
-            pass
+            content_new = None
 
     allure.attach("删除前的第一条评论: {}\n"
                   "删除后的第一条评论: {}\n".format(content, content_new), '评论详情', allure.attachment_type.TEXT)
@@ -114,6 +115,7 @@ def test_work_comments_two(login_and_logout183_module, stop_and_run_nemo):
         d(resourceId="com.codemao.nemo:id/edit_content").click()
         d.send_keys("第一级评论")  # adb广播输入
         d.set_fastinput_ime(False)  # 切换成正常的输入法
+        time.sleep(0.3)
         d(resourceId="com.codemao.nemo:id/tv_send_reply").click()  # 点击发送评论
 
     with allure.step('检查第一个评论是否为：第一级评论'):
@@ -128,6 +130,7 @@ def test_work_comments_two(login_and_logout183_module, stop_and_run_nemo):
         d(resourceId="com.codemao.nemo:id/edit_content").click()
         d.send_keys("第二级评论")  # adb广播输入
         d.set_fastinput_ime(False)  # 切换成正常的输入法
+        time.sleep(0.3)
         d(resourceId="com.codemao.nemo:id/tv_send_reply").click()  # 点击发送评论
 
     with allure.step('检查第二个评论是否为：第二级评论'):
@@ -151,6 +154,7 @@ def test_work_comments_two(login_and_logout183_module, stop_and_run_nemo):
         d(resourceId="com.codemao.nemo:id/edit_content").click()
         d.send_keys("第三级评论")  # adb广播输入
         d.set_fastinput_ime(False)  # 切换成正常的输入法
+        time.sleep(0.3)
         d(resourceId="com.codemao.nemo:id/tv_send_reply").click()  # 点击发送评论
 
     with allure.step('检查当前页第三个评论是：第三级评论'):
@@ -171,7 +175,7 @@ def test_work_comments_two(login_and_logout183_module, stop_and_run_nemo):
             content_new = d(resourceId="com.codemao.nemo:id/tv_comment_content").get_text()
             assert "第一级评论" not in content_new
         else:
-            pass
+            content_new = None
 
     allure.attach("content: {}\n"
                   "content_second: {}\n"
@@ -195,7 +199,7 @@ if __name__ == '__main__':
     # 先删除report文件夹
     subprocess.run('rmdir /s/q ' + path_report, shell=True, check=True)
     # # pytest.main(["-s", "-q", "--alluredir", path_xml])
-    pytest.main(["-s", "-q", "test_work_comments.py::test_work_comments_two", "--alluredir", path_xml])
+    pytest.main(["-s", "-q", "test_work_comments.py", "--alluredir", path_xml])
     # pytest.main(["--lf", "-v", "test_cloud.py", "--alluredir", path_xml])
     subprocess.run(r'allure generate ' + path_xml + ' -o ' + path_html + ' --clean', shell=True, check=True)
     subprocess.run(r'allure serve ' + path_xml, shell=True, check=True)
